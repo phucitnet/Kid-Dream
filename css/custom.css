@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    font-family: 'Roboto', sans-serif !important;
+}
+.tk_search {
+    margin: 0 0 0 26px;
+}
+
+.tk_search a, .tk_search input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tk_search_txt {
+    width: 99px;
+    height: 22px;
+    border: 1px solid #BABABA;
+    line-height: 24px;
+    border-radius: 12px;
+    background-color: transparent;
+    padding: 0 12px;
+    margin: 0 10px 0 0;
+}
+
+input.tk_search_txt::-webkit-input-placeholder {
+    color: #AFAFAF;
+    text-align: center;
+}
+
+input.tk_search_txt:-moz-placeholder {
+    color: #AFAFAF;
+    text-align: center;
+}
+
+input.tk_search_txt::-moz-placeholder {
+    color: #AFAFAF;
+    text-align: center;
+}
+
+input.tk_search_txt:-ms-input-placeholder {
+    color: #AFAFAF;
+    text-align: center;
+}
+
+/*===========汤米妮琪单品页样式===========*/
+.w1110 {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.tk_header {
+    position: relative;
+}
+
+.tk_logo {
+    padding: 10px 0 0 0;
+    margin: 0 38.5px;
+}
+
+.tk_nav li {
+    float: left;
+    margin-left: 10px;
+}
+
+.tk_nav_name {
+    width: 113px;
+    text-align: center; /* padding:0 px; */
+    position: relative;
+    bottom: -1px;
+    z-index: 99; /* border:1px solid transparent; border-top:0;*/
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.tk_nav_name a {
+    font-size: 13px;
+    line-height: 58px;
+    color: #666666;
+}
+
+.tk_nav li.tk_cur_nav .tk_nav_name {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+}
+
+.tk_nav li.tk_cur_nav .tk_nav_name a {
+    color: #FF8212;
+}
+
+.tk_nav_sort {
+    width: 1072px;
+    position: absolute;
+    left: 0;
+    z-index: 98;
+    padding: 20px 18px 0;
+    border: 1px solid #E0E0E0;
+    background-color: #fff; /*  box-sizing:border-box; -moz-box-sizing:border-box; */ /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+}
+
+.tk_subnav {
+    padding: 0 83px 20px 0;
+    float: left;
+}
+
+.tk_subnav_lastchild {
+    padding-right: 0;
+}
+
+.tk_subnav_caption {
+    overflow: hidden;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.tk_subnav_caption strong {
+    display: block;
+    float: left;
+    font-size: 16px;
+    width: 83px;
+    color: #323232;
+    font-weight: bold;
+}
+
+.tk_subnav_detail {
+    padding: 13px 0 0 0;
+}
+
+.tk_subnav_item {
+    width: 83px;
+    float: left;
+}
+
+.tk_subnav_item_lastchild {
+    padding-right: 0;
+    width: auto;
+}
+
+.tk_subnav_item span {
+    display: block;
+    padding: 0 0 5px 0;
+    color: #323232;
+    font-size: 14px;
+}
+
+.tk_cart { /* padding:8px 50px 0 0; */
+    position: relative;
+    padding-top: 8px;
+    width: 115px;
+    margin-left: 10px;
+}
+
+.tk_nav_txt a:hover {
+    color: #8c8c8c;
+}
+
+.tk_shopcart span {
+    /*     display: block; */
+    width: 13px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #FF8315;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    margin-left: 43.5px;
+}
+
+.tk_shopcart {
+    margin: 10px 0 0 0;
+    position: relative;
+    padding: 0 43.5px;
+}
+
+#tk_nav_category a {
+    color: #666666;
+}
+
+#tk_nav_category a:hover {
+    color: #8c8c8c;
+}
+
+.tk_account_btn a {
+    background-color: #B8B7BD;
+    color: #323232;
+}
+
+.tk_account_btn a :hover {
+    background-color: #ff9933;
+    color: #FFFFFF
+}
+.footerMenu ul li {
+    height: auto;
+    line-height: 26px;
+    font-size: 15px;
+}
