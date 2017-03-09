@@ -209,3 +209,111 @@ input.tk_search_txt:-ms-input-placeholder {
     float: left;
     margin-right: 46px;
 }
+
+#parameter2 li {
+    line-height: 22px;
+}
+
+.root61 .p-parameter-list li {
+    width: 240px;
+}
+
+.p-parameter-list li {
+    width: 225px;
+    padding-left: 0px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+    text-overflow: ellipsis;
+}
+
+.detail_attributes {
+    padding: 10px 0px 0px -12px;
+    width: 860px; /*margin:0 auto;*/
+}
+
+.detail_attributes li {
+    line-height: 26px;
+    font-size: 13px;
+}
+
+.reruletBigBox {
+    position: relative;
+    width: 200px;
+    min-width: 30px;
+}
+
+.reruletBox {
+    cursor: pointer;
+    text-align: left;
+    padding-right: 5px;
+    padding-top: 6px;
+}
+
+.reruletBox span {
+    text-align: left;
+    color: #000;
+    font-size: 12px;
+}
+
+/* .bar_code_pic{display:true} */
+#target {
+    width: 100%;
+    font-weight: bold;
+    font-family: 'Roboto';
+    padding: 20px 0 20px 6px;
+    background: #ECEBEB;
+}
+
+#target strong {
+    color: #900;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+#target span {
+    font-size: 14px;
+}
+
+#date {
+    color: #fc3;
+    font-size: 0.6em;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.pro_original_price {
+    color: #F30;
+}
+
+.show {
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.smghd {
+    vertical-align: bottom;
+    display: none;
+}
+
+.tk_suit_buyBtn button {
+    background-color: #B8B7BD;
+    color: #323232;
+}
+
+.tk_addtoCart a {
+    background-color: #B8B7BD;
+    color: #323232;
+    padding: 10px 15px;
+}
+
+.tk_suit_buyBtn button:hover {
+    background-color: #ff9933;
+    color: #FFFFFF
+}
+
+.tk_addtoCart a:hover {
+    background-color: #ff9933;
+    color: #FFFFFF
+}
