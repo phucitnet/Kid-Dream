@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.font_red{ font-size:18px; color:#f30; font-weight:bold;}
+.switch_box{ background:#ecebeb; padding:10px; display:none;}
+.switch_box.current{ display:block;}
+.btn_none{ width:160px; height:40px; font-size:16px; color:#666; line-height:40px; text-align:center; border:none; background:#ccc; border-radius:2px; display:inline-block; margin-left:74px;}
+.btn_red{ width:160px; height:40px; font-size:16px; color:#fff; line-height:40px; border:none; text-align:center; background:#ec2232; border-radius:2px; display:none; margin-left:74px; cursor:pointer;}
+.btn_red.current{ display:inline-block;}
+.switch_box a:hover{ color:#fff;}
+.time_box{ color:#f30; font-size:12px; margin-left:20px; display:inline-block;}
+.font_16{ font-size:16px;}
+.time_box strong{ font-size:20px;}
