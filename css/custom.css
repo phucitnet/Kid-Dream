@@ -196,3 +196,16 @@ input.tk_search_txt:-ms-input-placeholder {
     line-height: 26px;
     font-size: 15px;
 }
+
+#header_link {
+    background-color: #FFFDEE;
+}
+
+.hl_header_link {
+    padding: 10px 0;
+}
+
+.hl_header_link li {
+    float: left;
+    margin-right: 46px;
+}

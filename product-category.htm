@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9 -->
+<html lang="zh" class="translated-ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="images/hm.js"></script>
+
+
+    <title>Danh mục sản phẩm</title>
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+
+    <meta content="description">
+    <meta content="Keywords">
+    <meta property="qc:admins" content="3511664676647675636">
+    <meta property="wb:webmaster" cont="" ent="f8f8be867e7e27b3">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/ainatec.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/ueditor.parse.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/css.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/fontello.css">
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="http://www.tomyniki.com/css/fontello-ie7.css">
+    <![endif]-->
+    <link rel="stylesheet" href="css/orange.css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <script src="js/html5element.js"></script>
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="http://www.tomyniki.com/js/PIE.js"></script>
+    <![endif]-->
+
+    <script language="javascript">
+        $(function () {
+            if (window.PIE) {
+                $('.rounded').each(function () {
+                    PIE.attach(this);
+                });
+            }
+        });
+    </script>
+    <style id="chartsContainerHeight">
+        .edui-chart-container {
+            height: 300px
+        }
+
+        .edui-chart-container {
+            height: 300px
+        }</style>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="images/translateelement.css">
+</head>
+<body class="w1190" style="background-color:#FFFFFF;">
+
+<style>
+    .tk_search {
+        margin: 0 0 0 26px;
+    }
+
+    .tk_search a, .tk_search input {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .tk_search_txt {
+        width: 99px;
+        height: 22px;
+        border: 1px solid #BABABA;
+        line-height: 24px;
+        border-radius: 12px;
+        background-color: transparent;
+        padding: 0 12px;
+        margin: 0 10px 0 0;
+    }
+
+    input.tk_search_txt::-webkit-input-placeholder {
+        color: #AFAFAF;
+        text-align: center;
+    }
+
+    input.tk_search_txt:-moz-placeholder {
+        color: #AFAFAF;
+        text-align: center;
+    }
+
+    input.tk_search_txt::-moz-placeholder {
+        color: #AFAFAF;
+        text-align: center;
+    }
+
+    input.tk_search_txt:-ms-input-placeholder {
+        color: #AFAFAF;
+        text-align: center;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getCurrentMember.do", null, function (data) {
+            if (data == -1) {
+                $("#login_span").show();
+                $("#register_span").show();
+                $("#exit_span").hide();
+                $("#mem_center").hide();
+            } else {
+                $("#mem_center").show();
+                $("#exit_span").show();
+                $("#currentMember").html(data);
+                $("#login_span").hide();
+                $("#register_span").hide();
+            }
+        });
+
+        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/checkUserType.do", null, function (data) {
+            if (data == "member") {
+                $("#ent_center").hide();
+                $("#ent_exit_span").hide();
+            }
+            if (data == "entUser") {
+                $("#login_span").hide();
+                $("#register_span").hide();
+                $("#exit_span").hide();
+                $("#collect_span").hide();
+                $("#mem_center").hide();
+            }
+        });
+
+        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/getCurrentName.do", null, function (data) {
+            if (data != -1) {
+                $("#currentMember").html("企业用户:" + data);
+            }
+        });
+
+        $(".page-top .cart").click(function () {
+            window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/cart.do";
+        });
+        $(".page-top .order").click(function () {
+            window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/myOrder/1.do";
+        });
+        $(".page-top .member").click(function () {
+            window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getMemberInfo.do?member=get";
+        });
+        window.setTimeout("keepSession()", 600000);
+
+        $("#bannerPic").click(function () {
+            $("#b").fadeOut();
+            $("#bannerPic").fadeOut(500);
+        });
+        var value;
+        $(".tk_search_txt").focus(function (e) {
+            $(this).stop(true, true).animate({width: "180px"});
+            $(".headerTop_tips2").css("right", "586px");
+            return false;
+        }).blur(function (e) {
+            var value = $(this).val();
+            var placeholderValue = $(this).attr("placeholder")
+
+            if (value == "") {
+                $(this).stop(true, true).animate({width: "99px"});
+                $(".headerTop_tips2").css("right", "526px");
+            } else {
+                $(this).stop(true, true).animate({width: "180px"});
+                $(".headerTop_tips2").css("right", "586px");
+            }
+            return false;
+        });
+    });
+
+
+    function loginEnter() {
+        var redirect = encodeURIComponent(window.location.href);
+        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/login.do?redirect=" + redirect;
+    }
+    function registerEnter() {
+        var redirect = encodeURIComponent(window.location.href);
+        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/register.do?redirect=" + redirect;
+    }
+    function logout() {
+        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/logout.do", null, function (data) {
+            window.location.href = window.location.href;
+        });
+    }
+    function keepSession() {
+        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/keepSession.do", null, function (data) {
+
+        });
+        window.setTimeout("keepSession()", 600000);
+    }
+
+    function getMemberInfo() {
+        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getMemberInfo.do?member=get";
+    }
+    function getProductCollect() {
+        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getProductCollect/1.do";
+    }
+    function toEntLoginPage() {
+        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/toLoginPage.do";
+    }
+
+    function entLogout() {
+        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/entLogout.do", null, function (data) {
+            if (data) {
+                window.location.href = "http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html";
+            }
+        });
+    }
+    function toSearch2() {
+        var productKey = $(".tk_search_txt").val();
+        if (productKey != null && productKey != "") {
+            window.open("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/productSearch/1.do?productKey=" + productKey);
+        }
+    }
+</script>
+<div class="headerTop_w clearbox">
+    <div class="headerTop">
+        <div class="headerTop_tips2"><span id="currentMember" class="dn"></span>Chào mừng bạn đến súp Thống
+            Qi!</div>
+        <div class="headerTop_link">
+            <ul>
+                <li id="login_span"><a href="javascript:void(0)" onclick="loginEnter()" title="">Đăng
+                    nhập</a> &nbsp;|&nbsp;</li>
+                <!-- <li id="dealer_span"><a href="javascript:void(0)" onclick="toEntLoginPage()">经销商订货</a>&nbsp;|&nbsp;</li> -->
+                <!-- <li id="ent_center"><a href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealerCenter/entCenter.do">企业会员中心</a>&nbsp;|&nbsp;</li>
+                <li id="ent_exit_span"><a href="javascript:void(0)" onclick="entLogout()">企业退出</a></li>  -->
+                <li id="register_span"><a href="javascript:void(0)" onclick="registerEnter()" title="">Đăng
+                    ký</a> &nbsp;|&nbsp;</li>
+                <li id="exit_span" class="dn" style="display: none;"><a href="javascript:void(0)"
+                                                                        onclick="logout()">thoát</a>
+                    &nbsp;|&nbsp;</li>
+                <li id="mem_center" class="dn" style="display: none;">
+                    <a href="javascript:void(0)" onclick="getMemberInfo()" title="">Trung tâm cá nhân</a>
+                    &nbsp;|&nbsp;
+                </li>
+                <li>
+                    <div class="tk_search"><a href="javascript:toSearch2();" class="tk_search_btn"></a><input
+                            class="tk_search_txt" type="text" placeholder="Tìm kiếm sản phẩm" value=""></div>
+                </li>
+                <li class="english">
+                    <a href="http://en.tomyniki.com/" target="_blank" title="">
+                        <img src="images/eng.jpg">
+                        <p>ENG</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function getCoordinate(evnt) {
+
+        //var element=document.getElementById("header_link");
+        var element = $("#header_link");
+        if (document.all) {
+            x = event.clientX;
+            y = event.clientY;
+        }
+        else {
+            x = evnt.clientX;
+            y = evnt.clientY;
+        }
+        //status = "水平坐标："+ x + "；垂直坐标："+ y;
+        //alert(status)
+        if (y < 10) {
+            //element.style.display='block';
+            element.stop(true, true).slideDown();
+        } else if (y > 88) {
+            //element.style.display='none';
+            element.stop(true, true).slideUp();
+        }
+
+    }
+
+    document.onmousemove = getCoordinate;
+</script>
+<script>
+    var url = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000";
+    var accountUrl = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000";//跳转到结算页面时的请求路径
+    private_ajax(url + "/getTotalNum.do", null, function (data) {
+        if (data != null && data != "" && parseInt(data)) {
+            $("#tk_cartgoods_num").show();
+        }
+    });
+    $(function () {
+        $(".tk_nav > ul > li.tk_nav_txt").hover(
+            function () {
+                $(this).addClass("tk_cur_nav").children(".tk_nav_sort").show();
+            },
+            function () {
+                $(this).removeClass("tk_cur_nav").children(".tk_nav_sort").hide();
+            }
+        )
+        $(".tk_shopcart").click(function (e) {
+            if ($(this).hasClass("shopCart")) {
+                $(this).removeClass("shopCart");
+                private_ajax(url + "/getCartDetail.do", null, function (data) {
+                    if (data == "") {
+                        $(".tk_shopcart_txt").hide();
+                    } else {
+                        $(".tk_shopcart_txt").show();
+                        var obj = eval("(" + data + ")");
+                        var sum = 0;
+                        var total = 0;
+                        var lis = "";
+                        $.each(obj, function (key, val) {
+                            lis += "<li>";
+                            lis += "<a href='http://www.tomyniki.com/8af4f97851286013015128b2cb010000/detail.do?id=" + val.productId + "' target='_blank'><span class='tk_shopcart_proimg'><img  src='" + val.pictureUrl + "'><\/img><\/span>"
+                            lis += "<span class='tk_shopcart_protxt'>" + val.productName + "<\/span>";
+                            lis += "<\/a><\/li>";
+                            sum += val.amount * val.quantity;
+                            total += val.quantity;
+                        });
+                        $(".tk_shopcart_list").html(lis);
+                        $("#tk_cartgoods_num").show();
+                        $("#tk_shopcart_cart").html("(" + total + ")");
+                    }
+                });
+                $(".tk_shopcart_con").show();
+            } else {
+                $(this).addClass("shopCart");
+                $(".tk_shopcart_con").hide();
+            }
+        })
+    });
+    function toCart() {
+        window.open(url + "/cart.do");
+    }
+
+    var fontBold = '0';
+    if (fontBold == 1) {
+        $(".clearbox li a").css("font-weight", "normal");
+    }
+</script>
+
+<div class="tk_header w1110 clearbox">
+    <div class="tk_logo fl"><a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html"><img
+            src="images/indexPic.png" height="38" width="38"></a></div>
+    <div class="tk_nav fl">
+        <ul class="clearbox">
+            <li>
+                <div class="tk_nav_name"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9"
+                        target="_self">em bé</a></div>
+            </li>
+
+            <li>
+                <div class="tk_nav_name"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-45.html?1"
+                        target="_self">trường mầm non</a></div>
+            </li>
+
+            <li>
+                <div class="tk_nav_name"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-46.html?2"
+                        target="_self">tiểu học</a></div>
+            </li>
+
+            <li>
+                <div class="tk_nav_name"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-47.html?3"
+                        target="_self">trường trung học</a></div>
+            </li>
+
+            <li>
+                <div class="tk_nav_name"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-48.html?7"
+                        target="_self">Countryside</a></div>
+            </li>
+
+            <li>
+                <div class="tk_nav_name"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-87.html?8"
+                        target="_self">cây thông</a></div>
+            </li>
+
+            <li class="tk_nav_txt">
+                <div class="tk_nav_name" id="tk_nav_category"><a
+                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9#">Tất
+                    cả sản phẩm</a></div>
+                <div class="tk_nav_sort  clearbox dn" style="display: none;">
+                    <!-- 一级 -->
+                    <!-- 一级 -->
+                    <!-- 二级 -->
+                    <!-- 三级 -->
+                    <div class="tk_subnav">
+                        <div class="tk_subnav_caption">
+                            <strong>
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-1.html?pid=3"
+                                   target="_blank">Single bed </a>
+                            </strong>
+                            <font><strong><a
+                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-46.html?pid=6"
+                                    target="_blank"><font>tính năng giường </font></a></strong><strong><a
+                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-3.html?pid=4"
+                                    target="_blank"><font>tủ </font></a></strong><strong><a
+                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-12.html?pid=5"
+                                    target="_blank"><font>bàn ghế </font></a></strong><strong style="width: auto;"><a
+                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-10.html?pid=7"
+                                    target="_blank"><font>tủ</font></a></strong></font><strong>
+                            <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-46.html?pid=6"
+                               target="_blank"><font></font></a>
+                        </strong>
+                            <strong>
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-3.html?pid=4"
+                                   target="_blank"><font></font></a>
+                            </strong>
+                            <strong>
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-12.html?pid=5"
+                                   target="_blank"><font></font></a>
+                            </strong>
+                            <strong style="width: auto;"><!-- 最后一个节点 -->
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-10.html?pid=7"
+                                   target="_blank"><font></font></a>
+                            </strong>
+                        </div>
+                        <div class="tk_subnav_detail clearbox">
+                            <div class="tk_subnav_item">
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-48.html?id=12"
+                                                                               target="_blank">Giường đơn </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-49.html?id=13"
+                                        target="_blank"><font>Air giường ngủ </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-47.html?id=83"
+                                        target="_blank"><font>sofa giường </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-56.html?id=150"
+                                        target="_blank"><font>nôi</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-49.html?id=13"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-47.html?id=83"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-56.html?id=150"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                            <div class="tk_subnav_item">
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-29.html?id=106"
+                                                                               target="_blank">Giường tầng </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-30.html?id=108"
+                                        target="_blank"><font>Bookshelf giường </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-68.html?id=222"
+                                        target="_blank"><font>ngủ loft</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-30.html?id=108"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-68.html?id=222"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                            <div class="tk_subnav_item">
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-31.html?id=18"
+                                                                               target="_blank">Hai tủ quần áo </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-32.html?id=19"
+                                        target="_blank"><font>ba tủ quần áo </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-33.html?id=20"
+                                        target="_blank"><font>bốn tủ quần áo </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-34.html?id=21"
+                                        target="_blank"><font>tủ quần áo cửa trượt</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-32.html?id=19"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-33.html?id=20"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-34.html?id=21"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                            <div class="tk_subnav_item">
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-50.html?id=86"
+                                                                               target="_blank">Bàn kết hợp </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-55.html?id=87"
+                                        target="_blank"><font>bàn </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-51.html?id=110"
+                                        target="_blank"><font>tủ </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-35.html?id=206"
+                                        target="_blank"><font>ghế </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-25.html?id=207"
+                                        target="_blank"><font>ghế gỗ</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-55.html?id=87"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-51.html?id=110"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-35.html?id=206"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-25.html?id=207"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-44.html?id=26"
+                                                                               target="_blank">Bedside </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-43.html?id=27"
+                                        target="_blank"><font>Chests </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-42.html?id=28"
+                                        target="_blank"><font>hoạt động nội các </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-41.html?id=74"
+                                        target="_blank"><font>tủ khóa </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-11.html?id=111"
+                                        target="_blank"><font>tủ sách </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-63.html?id=156"
+                                        target="_blank"><font>gương trang điểm</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-43.html?id=27"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-42.html?id=28"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-41.html?id=74"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-11.html?id=111"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-63.html?id=156"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 三级 -->
+                    <div class="tk_subnav">
+                        <div class="tk_subnav_caption">
+                            <strong>
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-4.html?pid=123"
+                                   target="_blank">đồ nội thất nhỏ </a>
+                            </strong>
+                            <font><strong><a
+                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-9.html?pid=112"
+                                    target="_blank"><font>nệm </font></a></strong><strong style="width: auto;"><a
+                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-6.html?pid=173"
+                                    target="_blank"><font>dệt may</font></a></strong></font><strong>
+                            <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-9.html?pid=112"
+                               target="_blank"><font></font></a>
+                        </strong>
+                            <strong style="width: auto;"><!-- 最后一个节点 -->
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-6.html?pid=173"
+                                   target="_blank"><font></font></a>
+                            </strong>
+                        </div>
+                        <div class="tk_subnav_detail clearbox">
+                            <div class="tk_subnav_item">
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-16.html?id=166"
+                                                                               target="_blank">sofa nhỏ </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-14.html?id=157"
+                                        target="_blank"><font>bàn nhỏ và ghế</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-14.html?id=157"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                            <div class="tk_subnav_item">
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-40.html?id=113"
+                                                                               target="_blank">Sợi nệm </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-38.html?id=115"
+                                        target="_blank"><font>bọt nệm </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-37.html?id=116"
+                                        target="_blank"><font>nệm lò xo</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-38.html?id=115"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-37.html?id=116"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-24.html?id=174"
+                                                                               target="_blank">Bộ đồ giường </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-22.html?id=175"
+                                        target="_blank"><font>Gối </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-23.html?id=176"
+                                        target="_blank"><font>Gối </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-21.html?id=177"
+                                        target="_blank"><font>Chăn</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-22.html?id=175"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-23.html?id=176"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-21.html?id=177"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 三级 -->
+                    <div class="tk_subnav">
+                        <div class="tk_subnav_caption">
+                            <strong style="width: auto;"><!-- 最后一个节点 -->
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-5.html?pid=135"
+                                   target="_blank">Văn phòng phẩm</a>
+                            </strong>
+                        </div>
+                        <div class="tk_subnav_detail clearbox">
+                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-57.html?id=152"
+                                                                               target="_blank">Máy tính xách tay </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-59.html?id=153"
+                                        target="_blank"><font>lưu trữ </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-19.html?id=136"
+                                        target="_blank"><font>bút </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-18.html?id=137"
+                                        target="_blank"><font>túi </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-61.html?id=183"
+                                        target="_blank"><font>đèn </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-70.html?id=217"
+                                        target="_blank"><font>công cụ bán hàng </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-73.html?id=225"
+                                        target="_blank"><font>prop </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-74.html?id=227"
+                                        target="_blank"><font>liệu máy bay</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-59.html?id=153"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-19.html?id=136"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-18.html?id=137"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-61.html?id=183"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-70.html?id=217"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-73.html?id=225"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-74.html?id=227"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 三级 -->
+                    <div class="tk_subnav tk_subnav_lastchild"><!-- 最后一个节点 -->
+                        <div class="tk_subnav_caption">
+                            <strong style="width: auto;"><!-- 最后一个节点 -->
+                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-8.html?pid=199"
+                                   target="_blank">đời sống</a>
+                            </strong>
+                        </div>
+                        <div class="tk_subnav_detail clearbox">
+                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
+                                <!-- 四级 -->
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-62.html?id=201"
+                                                                               target="_blank">Khăn </a>
+																	  </span>
+                                <font><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-67.html?id=200"
+                                        target="_blank"><font>choàng tắm </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-20.html?id=204"
+                                        target="_blank"><font>thảm </font></a></span><span><a
+                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-66.html?id=205"
+                                        target="_blank"><font>cốc</font></a></span></font><span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-67.html?id=200"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-20.html?id=204"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                                <span>
+																     		<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-66.html?id=205"
+                                                                               target="_blank"><font></font></a>
+																	  </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="tk_cart fl">
+
+        <div class="tk_shopcart shopCart">
+            <i class="tk_cart_icon"></i>
+            <span id="tk_cartgoods_num" class="dn"></span>
+        </div>
+
+        <div class="tk_shopcart_con dn">
+            <b id="tk_triangle"></b>
+            <div class="tk_shopcart_txt dn">
+                <p id="p" class="dn">Giỏ hàng của bạn đang trống</p>
+
+                <ul class="tk_shopcart_list">
+
+                </ul>
+                <div class="tk_account_btn"><a
+                        href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/selectCartItem.do">Thanh
+                    toán</a></div>
+            </div>
+            <nav class="tk_shopcart_nav">
+                <ul>
+                    <li onclick="toCart()">
+                        <div class="tk_shopcart_item tk_shopcart_cart">Giỏ hàng <span
+                                id="tk_shopcart_cart">(0)</span></div>
+                    </li>
+
+                    <li>
+                        <div class="tk_shopcart_item tk_shopcart_phone">
+                            <span>400-8300-456</span></div>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                           href="http://wpa.qq.com/msgrd?v=3&amp;uin=2449332488&amp;site=qq&amp;menu=yes">
+                            <div class="tk_shopcart_item tk_shopcart_consult">Tư vấn trực
+                                tuyến</div>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<style>
+    .yb_floor_con1 {
+        width: 1110;
+        margin: 0 auto;
+        border: 1px solid #B2B2B2;
+        margin-top: 8px;
+        /*   padding: 0 12px 12px */
+    }
+
+    .clearfix1:after {
+        content: "";
+        height: 0;
+        visibility: hidden;
+        display: block;
+        clear: both;
+    }
+</style>
+<div class="tk_bread_nav w1110" style="margin-top: 12px;">
+    <ul class="clearbox" id="product_nav">
+        <li>
+            <a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html">nhà</a>
+        </li>
+        <li><a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9#"
+               id="page_path">em bé</a></li>
+        <script type="text/javascript">
+            var url = window.location.href;//  location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.split("?")[1];
+                if (str.indexOf("&") == -1) {
+                    private_ajax2("http://www.tomyniki.com/getNavName.do?id=" + str, null, function (data) {
+                        if (data != null && data != '') {
+                            $("#page_path").html(data);
+                        }
+                    });
+                }
+            }
+        </script>
+    </ul>
+</div>
+<!--==================list.backgroundSelect==1为背景图片==================-->
+<div class="clo_1 clearfix" style="margin-top: 20px;width: 1110px; background-color:#FFFFFF;">
+
+
+    <div class="clearfix">
+        <div class="clearfix img_clear_120">
+            <a style="margin-top: 0px;margin-right: 0px;"
+               href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-143.html" target="_self"><img
+                    src="images/products/3698fe11e970431da69da82b9c4af172.jpg" width="1094">
+                <p style="font-size: 15px;margin-top: 6px;color:#707070">
+                    <span style="font-weight: bold;color:#323232;">Goethe</span>
+                    <!--  加粗 -->
+                    cũi gỗ
+                </p>
+            </a>
+            <a style="margin-top: 60px;margin-right: 20px;"
+               href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-90.html" target="_self"><img
+                    src="images/products/8dd6b5e76b024dbbb6a7293640b52a3e.jpg" width="262">
+                <p style="font-size: 15px;margin-top: 6px;color:#707070">
+                    <span style="font-weight: bold;color:#323232;">Andersen</span><!--  加粗 -->
+                    tấm nôi
+                </p>
+            </a>
+            <a style="margin-top: 60px;margin-right: 20px;"
+               href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-144.html" target="_self"><img
+                    src="images/products/a2beeb9820b34cc78e388bac2d77918f.jpg" width="264">
+                <p style="font-size: 15px;margin-top: 6px;color:#707070">
+                    <span style="font-weight: bold;color:#323232;">Andersen</span><!--  加粗 -->
+                    cũi gỗ
+                </p>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="clear"></div>
+<!--  -->
+<div class="footerBox clear" style="background-color:#262626;margin-top:60px;padding-bottom:30px;">
+    <div class="footer" style="width:1110px">
+        <div class="footer_con">
+            <div class="footerMenu clearbox">
+                <dl style="width:222px;padding-right:0px;">
+                    <div style="margin: 0px auto; width: 111px;">
+                        <dt style="color:#FFFFFF">Giới thiệu</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="http://tomyniki.com/aboutus.aspx" title="" target="_blank"
+                                       style="color:#BFBFBF">Hồ sơ công ty</a></li>
+                                <li>
+                                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9"
+                                       title="" target="_blank" style="color:#BFBFBF">Tham gia với chúng
+                                        tôi</a></li>
+                                <li><a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-2.html"
+                                       title="" target="_blank" style="color:#BFBFBF">cửa hàng
+                                    ẩn</a></li>
+                                <li><a style="color:#BFBFBF">Tham chúng tôi</a></li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <dl style="width:444px;padding-right:0px;">
+                    <div style="margin: 0px auto; width: 386px;">
+                        <dt style="color:#FFFFFF">Liên hệ</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9"
+                                       title="" target="_blank" style="color:#BFBFBF">Địa chỉ: Khu công
+                                        nghiệp 3 Longjiang Thuận Đức thành phố Phật Sơn, Bắc đường</a>
+                                </li>
+                                <li><a style="color:#BFBFBF">Tel: 400-8300-456</a></li>
+                                <li>
+                                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-93.html?9"
+                                       title="" target="_blank" style="color:#BFBFBF">E-mail:
+                                        yao.huang@tomyniki.com</a></li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <dl style="width:222px;padding-right:0px;">
+                    <div style="margin: 0px auto; width: 100px;">
+                        <dt style="color:#FFFFFF">Thực hiện theo chúng tôi</dt>
+                        <img src="images/bc6cb7173099459f9eea7796800acd52.jpg" width="100" height="100" alt="">
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <style type="text/css">
+        .foot {
+        }
+
+        .foot img {
+            display: inline;
+        }
+    </style>
+    <div class="foot">
+
+    </div>
+
+</div>
+<!-- 抽奖 -->
+<!--  -->
+<div class="drawBox"></div>
+<div class="b" id="b"></div>
+
+<script type="text/javascript">
+    function getByClass(oParent, sClass) {
+        var aEle = oParent.getElementsByTagName('*');
+        var aTmp = [];
+        var i = 0;
+        for (i = 0; i < aEle.length; i++) {
+            if (aEle[i].className == sClass) {
+                aTmp.push(aEle[i]);
+            }
+        }
+        return aTmp;
+    }
+
+    $(window).ready(function () {
+        //几F
+        var oCategoryf = getByClass(document, "categoryf");
+        for (var i = 0; i < oCategoryf.length; i++) {
+            oCategoryf[i].innerHTML = (i + 1 + "F");
+        }
+
+        $(".conlistProduct ").each(function () {
+            var oIndex = $(this);
+            oIndex.find('.conlist dl dd:first').attr('class', 'block');
+            oIndex.find('.conlist dl dt:first').attr('class', 'none');
+            var indexId = $(this).attr("id");
+            $("#" + indexId + "_con").find("dl").mouseover(function () {
+                $(this).parent().find('dl dd').attr('class', '');
+                $(this).parent().find('dl dt').attr('class', '');
+                $(this).find("dd").attr('class', 'block');
+                $(this).find("dd i").text($(this).index() + 1);
+                $(this).find("dt").attr('class', 'none');
+            })
+        });
+        $(".ch_pro").each(function () {
+            var oThisIndex = $(this);
+            var thisId = $(this).attr("id");
+            var oCH_list = $(this).find($(".ch_list"));
+            var aLi = oCH_list.find("li");
+            var oCH_listId = $("#" + thisId + "_con");
+            var aUlBtn = $("#" + thisId + "_btn");
+            var Oa = aLi.find('a');
+
+            var aImg = $("#" + thisId + "_con li");
+            var iSize = aImg.size();
+
+            var oprve = oThisIndex.find(".lll");
+            var onext = oThisIndex.find(".rrr");
+
+            if (aLi.length == 1) {
+                oprve.css({display: 'none'});
+                onext.css({display: 'none'});
+                aUlBtn.css({display: 'none'});
+            }
+
+            var index = 0;		//切换索引
+            var timer;
+            var interval = 3000;
+            for (var i = 0; i < aLi.length; i++) {
+                var aBtnLi = document.createElement("li");
+                aBtnLi.innerHTML = (i + 1);
+                aUlBtn.append(aBtnLi);
+            }
+            aUlBtn.find('li:first').addClass('on');
+            oCH_listId.find('li:first').css({opacity: '100'});
+
+
+            var aPage = $("#" + thisId + "_btn li");
+            oprve.on('click', function () {		//左边按钮点击
+                index--;
+                if (index < 0) {
+                    index = iSize - 1
+                }
+                change();
+            });
+            onext.on('click', function () {    //右边按钮点击
+                index++;
+                if (index > iSize - 1) {
+                    index = 0
+                }
+
+                change();
+            });
+
+
+            function change() {
+                aPage.removeClass('on');
+                aPage.eq(index).addClass('on');
+                aImg.stop();
+                aImg.eq(index).siblings().animate({
+                    opacity: 0
+                }, 1500)
+                aImg.eq(index).animate({
+                    opacity: 1
+                }, 1500)
+            }
+
+            function play() {
+                timer = setTimeout(function () {
+                    onext.trigger('click');
+                    play();
+                }, interval);
+            }
+
+            function stop() {
+                clearTimeout(timer);
+            }
+
+            //分页按钮点击
+            aPage.click(function () {
+                index = $(this).index();
+                change();
+            });
+
+            oThisIndex.hover(stop, play);
+            play();
+        });
+
+
+        //选项卡
+        var thisId = ($(".ch_tl").attr('id'));
+        $('.clo_tea_tab_right').find(".ch_con:first").css({display: 'block'});
+        $('.ch_tl').find("li:first").attr('class', 'on');
+        $('.clo_tea_tab_right').find(".ch_tl").find("li").click(function () {
+            var index = $(this).index();
+            var thisList = $(this).parent().find("li");
+            var thisId = $(this).parent().attr("id");
+
+            thisList.attr('class', '');
+            $("#" + thisId + "_con").find(".ch_con").css('display', 'none');
+
+            $(this).attr('class', 'on');
+            $("#" + thisId + "_con").find(".ch_con").eq(index).fadeIn("slow");
+
+        });
+
+
+        $(".pro ul li img").mouseenter(function () {
+            $(this).stop(false, false).animate({marginLeft: '-10px'});
+        });
+        $(".pro ul li img").mouseout(function () {
+            $(this).stop(false, false).animate({marginLeft: '0px'});
+        });
+
+//三列2行（茶多多）
+        $('input[name=categoryPid]').each(function () {
+            var aThis = $(this);
+            var categoryPid = $(this).val();
+            var datas = {"categoryPid": categoryPid};
+            var str = "";
+            private_ajax2("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getMallCategoryByPid.do", datas, function (data) {
+                var mallCategoryData = eval("(" + data + ")");
+                $.each(mallCategoryData, function (index, value) {
+                    if (categoryPid == value.pid) {
+                        str += "<li>"
+                        str += "<a href='http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getProductList/1.do?mallId=" + value.productId + "&categoryname=" + value.name + "&parentId=" + value.id + "' target='_blank'>" + value.name + "<\/a>";
+                        str += "<\/li>";
+                        aThis.next("ul").html(str);
+                    }
+                });
+            });
+        });
+
+        var oSlide = $(".page-slide").css('height');
+        //$(".all-sort-list").css({height:oSlide});
+        $("#absoultDraw").click(function () {
+            var drawId = $(this).find("input").val();
+            var datas = {drawId: drawId};
+            private_ajax2("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/drawInfo.do", datas, function (data) {
+                $(".drawBox").fadeIn();
+                $(".drawBox").html(data);
+                showForm();
+                var h = $(window).height() / 2;
+                var w = $(window).width() / 2;
+                $("#login_popup").fadeIn();
+                $(".login_popup").css({position: 'absolute'});
+                $(".login_popup").css({
+                    top: (h - $(".login_popup").height() / 2) + 'px',
+                    left: (w - $(".login_popup").width()) + 'px'
+                });
+            });
+        });
+        changeImg(".new_product_adv", ".new_product_img");
+        function changeImg(objId, imgId) {
+            var smallimgSrc;
+            var largeimgSrc;
+            var smallObj = $(imgId);
+            var largeObj = $(objId);
+            var index;
+            smallObj.find("li").mousemove(function (e) {
+                index = $(this).index();
+                smallimgSrc = $(this).find("img").attr("data-url");
+                largeimgSrc = smallimgSrc;
+                largeObj.find("li").eq(index).find("img").attr("src", largeimgSrc).end().fadeIn().siblings("li").fadeOut();
+
+            });
+        }
+
+        var url = window.location.href;//  location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.split("?")[1];
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        var memberKey = theRequest["key"];
+        if (memberKey != null && memberKey != '') {//通过接口返回的key自动登录
+            var datas = {key: memberKey};
+            private_ajax2("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/keyLogin.do", datas, function (data) {
+                if (data == '1') {
+                    $("#exit_span").show();
+                    $("#currentMember").html(data);
+                    $("#login_span").hide();
+                    $("#register_span").hide();
+                }
+            });
+        }
+    });
+
+    uParse('#content', {rootPath: 'http://www.tomyniki.com//ueditor/'})
+</script>
+<input type="hidden" id="house_size_id" value="0">
+
+</body>
+</html>
