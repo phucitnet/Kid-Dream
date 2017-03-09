@@ -1,0 +1,21 @@
+
+
+.album_ban{width:700px; height:420px; margin:12% auto; -display: none;}
+.album_ban span{width:224px; height:164px; float:left; margin:0 5px 5px 0;}
+.album_ban span img{width:220px; height:160px; border-radius:5px;}
+.album_dis{width:100%; height:100%; position: absolute; top:0; left:0;z-index:999999;  background:rgba(0,0,0,0.8); display: none;}
+.album_mark{width:100%; height:100%; display: block; position: absolute; top:0; left:0;z-index:666666;}
+.album_close{display:block;width:20px;height:20px;color:#fff;font-size:24px;font-family:'sans-serif';position:absolute;top:20px;right:20px;z-index:6666666;cursor:pointer;}
+.album_close:hover{color:#c00;}
+.album_container{width:100%;position:fixed;left:0;top:0;}
+.album_box{position: fixed; top:30%; left:25%;width:50%;height:60%;z-index:9999999;}
+.album_showImg{height:100%;}
+.album_txt{position:absolute;bottom:0;left:0;width:100%;height:15%;}
+.album_txt_bg{background-color:#000;opacity:0.4;filter:Alpha(opacity=40);width:100%;height:100%;}
+.album_txt_detail{position:absolute;left:0;top:0;width:100%;height:100%;color:#fff;line-height:22px;font-size:14px;padding:10px;box-sizing:border-box; -moz-box-sizing:border-box; /* Firefox */ -webkit-box-sizing:border-box; /* Safari */}
+.album_showImg img{position: absolute; top:0; left:0; width:100%; height:100%;}
+.album_back,.album_next{font-size:40px;text-align:center; line-height:100px; width:50px; height:100px;color:#ccc
+;position: absolute;cursor:pointer;font-family:'sans-serif';z-index:999999999;z-index:9999999;}
+.album_back{left:10%; top:45%;}
+.album_next{ right:10%; top:45%;}
+.album_back:hover,.album_next:hover{color:#fff;}

@@ -1,0 +1,131 @@
+
+.btn_detail_add{
+	box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+	}
+/*#nav_color{
+	height:44px;
+	background:url(../images/orange.png) repeat-x;
+	}
+#nav_color li{
+	float:left;
+	width:113px;
+	text-align:center;
+	height:44px;
+	line-height:44px;
+	}
+#nav_color li:hover{
+	background:url(../images/orange_h.png) repeat-x;
+	}	
+#nav_color li a{
+	color:#ffffff;
+	font-size:18px;
+	}*/
+.btn_detail_add{
+	width:310px;
+	border:1px solid #ccc;
+	border-radius:10px;
+	text-align:center;
+	background:url(../images/gray.png) repeat-x;
+	}	
+.btn_detail_add b{
+	width:25px;
+	height:25px;
+    display:inline-block;
+	vertical-align:middle;
+	background:url(../images/btncss.png) 0 -98px no-repeat;
+	}	
+.btn_detail_add span{
+	vertical-align:middle;
+	display:inline-block;
+	padding-left:5px;
+	}	
+.btn_detail_add:hover{
+	background:url(../images/gray_h.png) repeat-x;
+	}		
+.btn_detail_add a,.btn_orange_buy a{
+	color:#EC5813;
+	font-size:20px;
+	padding:6px 40px;
+	display:block;
+	}			
+.btn_detail_add,.btn_orange_buy{
+	float:left;
+	overflow:hidden;
+	display:inline;
+	}	
+.btn_orange_buy{
+	border:1px solid #F36833;
+	border-radius:10px;
+	text-align:center;
+	margin-left:10px;
+	
+	}	
+.btn_orange_buy a{
+	display:block;
+	padding:8px 40px;
+	color:#ffffff;
+	background:url(../images/orange_btn.png) repeat-x;
+	}
+.btn_orange_buy a:hover{
+	background:url(../images/orange_btn_h.png) repeat-x;
+	}	
+	
+.shopCart_infor{
+	background: url(../images/cart_orange.png) no-repeat;
+}
+	
+
+.shopCart_detail{
+ 	/* border:1px solid rgba(215, 63, 19, 0.68);  */
+}
+.message .msg a{
+	color: rgb(211, 10, 10);
+}
+.shopCart_detail #divv p a{	
+ 	/* color: rgba(224, 60, 12, 1);  */
+	
+}		
+.add_cart_notice{
+	 background-color: #F9FAFD;
+}
+.add_cart_notice .success{
+    color: #E47139;
+}
+.account-address .head,.account-payment .head, .account-invoice .head,.account-cart .head{
+	
+	background-color: #D8D8D9;
+
+}
+.cart .cart_foot .account{
+   margin-top: 10px;
+   width: 151px;
+   height: 32px;
+   background: url(../images/account_orange.png) no-repeat; 
+}
+.account .submit-button .submitorder{
+   margin-top: 10px;
+   width: 140px;
+   height: 37px;
+   background: url(../images/submit_orange.png) no-repeat 0 0;
+   display:block;
+   float:right;
+}
+.account-address-form{
+    background-color: #F9FAFD;
+}
+
+.pager .pager_content a{
+	background: rgba(241, 113, 58, 0.65);
+	
+}	
+.pager .pager_content .current{
+ 	border: 1px rgba(242, 98, 7, 1) solid;
+	background: #EC8240;
+}
+.pager .pager_content a:HOVER{
+		border: 1px rgba(242, 98, 7, 1) solid;
+}
+
+	

@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+
+.clo_1{
+	margin: 0px auto;
+}
+.clo_1 a {
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	float: left;
+}
+.clo_1 img{
+	display: block;
+}
+
+.clo_product{
+  margin: 0px auto;
+}
+.clo_product_img {
+    overflow: hidden;
+    position: relative;
+}
+.clo_product_name {
+    padding: 14px 0px 8px 18px;
+    height: 16px;
+}
+.clo_product_name a :hover{
+ 	color:#333;
+}
+.clo_product_country {
+    padding: 9px 0px 6px 18px;
+}
+.clo_product_country span{
+	color: #666;
+	display: inline-block;
+	margin-top: 12px;
+	margin-left:10px;
+}
+.clo_product_txt{
+	color: #999;
+}
+.clo_product_name p {
+    text-overflow: ellipsis;
+	overflow: hidden;
+	height: 22px;
+	white-space: nowrap;
+   /*  font-weight: bold; */
+}
+
+.clo_product_txt span {
+    display: block;
+    padding: 0px 0px 2px;
+    color: #E31436;
+    display: inline-block;
+    margin-right: 6px;
+}
+.clo_product li {
+    float: left;
+}
+.clo_product_txt del{
+	 margin-right: 6px;
+}
+.clo_product_price {
+    padding: 0px 0px 12px 18px;
+}
+.w-comblabel {
+    display: inline-block;
+    border: 1px dotted #E31436;
+    color: #E31436;
+}
+/*
+.clo_product li:hover .masking {
+    display: block;
+}
+.masking {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0% 0%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}*/
+.clo_product_img{overflow:hidden;}
+.clo_product_img img{margin:0 auto;}
+.clo_product_img:hover img{	
+    animation: bigscales 0.3s linear forwards;
+	-moz-animation: bigscales 0.3s linear forwards;	/* Firefox */
+	-webkit-animation: bigscales 0.3s  linear forwards;	/* Safari 和 Chrome */
+	-o-animation: bigscales 0.3s linear forwards;	/* Opera */
+}
+.content02{margin:0px auto;}
+.item_box_l,.item_box_mid,.item_box_bot{float:left;}
+.item_box_l{box-sizing:border-box; -moz-box-sizing:border-box; /* Firefox */ -webkit-box-sizing:border-box; /* Safari */}
+.item_box_mid,.item_box_bot{box-sizing:border-box; -moz-box-sizing:border-box; /* Firefox */ -webkit-box-sizing:border-box; /* Safari */}
+.item_box_mid li,.item_box_bot li{float:left;}
+
+.item_box_mid li:last-child,.item_box_bot li:last-child{padding-right:0;float:right;}
+.nav_list li .time_icon{ padding-left:16px; background:url(../images/icon_time02.png) no-repeat right top;}
+.nav_list li.current .time_icon,.nav_list li:hover .time_icon{ padding-left:16px; background:url(../images/icon_time02.png) no-repeat;}
+
+.hl_pro_price{padding:0 0 12px 18px;background-color:#E9EFDF;}
+.pro_price_txt span{display:block;width:126px;padding:0 0 2px 0;}
+.pro_consult_btn{width:75px;height:35px;background-color:#7F9B40;position:relative;}
+.pro_consult_btn i{display:block;position:absolute;left:0;top:12px;width:0;height:0;border:6px solid;}
+.pro_consult_btn a{display:block;color:#fff;line-height:35px;padding-left:16px;}
+
+/*index.html*/
+.tk_housebg_fl{float:left;}
+.tk_houseImg_fl{float:left;}
+.tk_housebg_fr{float:right;}
+.tk_houseImg_fr{float:right;}
+.tk_house_bg{position:relative;}
+.tk_house_txt{padding:10% 10% 0 0;width:50%;float:right;}
+.tk_housebg_fr .tk_house_txt{float:left;padding:10% 0 0 10%;}
+.tk_house_txt img{width:100%;}
+.tk_house_triangletxt{position:absolute;right:-20px;top:76px;z-index:2;width:20px;color:#fff;font-size:18px;}
+.tk_house_trianglebg{position:absolute;right:-80px;top:50px;width:0;height:0;border-width:49px 40px;border-style:solid;border-color:transparent transparent transparent #F24B2B;z-index:1;}
+.tk_housebg_fr .tk_house_triangletxt{left:-20px;}
+.tk_housebg_fr .tk_house_trianglebg{left:-80px;border-color:transparent #F24B2B transparent transparent;}
+
+.tk_house_img{position:relative;}
+.tk_house_box{position:relative;width:100%;overflow:hidden;height:100%;}
+.tk_house_container{width:100%;position:relative;}
+.tk_house_item{width:100%;float:left;}
+.tk_house_item img{width:100%;}
+.tk_house_arrow{display:block;position:absolute;top:50%;margin-top:-25px;right:18%;width:49px;height:49px;background-image:url(../images/tk_house_arrow_icon.png);cursor:pointer;}
+.tk_houseImg_fr .tk_house_arrow{left:18%;
+transform: rotate(180deg);
+-ms-transform: rotate(180deg);		/* IE 9 */
+-webkit-transform: rotate(180deg);	/* Safari and Chrome */
+-o-transform: rotate(180deg);		/* Opera */
+-moz-transform: rotate(180deg);		/* Firefox */
+}
+.tk_bread_nav{margin:20px auto;}
+.tk_bread_nav li{float:left;padding:0 10px;border-right:1px solid #707070;margin-bottom: 12px;}
+.tk_bread_nav li a{color:#707070;}
+.tk_bread_nav li:last-child{border-right:0;}
