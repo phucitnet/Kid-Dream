@@ -3,7 +3,7 @@
 .tk_header{position:relative;z-index:999;}
 /*.tk_logo{padding:10px 0 0 0;margin:0 50px;}
  .tk_nav li{float:left;}
-.tk_nav_name{padding:0 50px;position:relative;bottom:-1px;z-index:99;border:1px solid transparent;border-top:0;font-family:"Microsoft Yahei";}
+.tk_nav_name{padding:0 50px;position:relative;bottom:-1px;z-index:99;border:1px solid transparent;border-top:0;font-family:"Roboto", san serif;}
 .tk_nav_name a{font-size:18px;line-height:58px;}
 .tk_nav li.tk_cur_nav .tk_nav_name{background-color:#fff;border-bottom:1px solid #fff;border-left:1px solid #E0E0E0;border-right:1px solid #E0E0E0;}
 .tk_nav li.tk_cur_nav .tk_nav_name a{color:#FF8212;} */
@@ -91,12 +91,12 @@ transform: rotate(-90deg);
 .tk_market_price{font-size:12px;color:#9C9C9C;}
 .tk_market_price i{text-decoration:line-through;font-style:normal;}
 .tk_promotion_price{font-size:14px;}
-.tk_promotion_price strong{font-size:30px;color:#Fd8427;font-style:normal;font-weight:normal;font-family:"Microsoft Yahei";}
+.tk_promotion_price strong{font-size:30px;color:#Fd8427;font-style:normal;font-weight:normal;font-family:"Roboto", san serif;}
 .tk_addCart_btn{display:inline-block;vertical-align:middle;margin-top:66px;/* margin:0 0 0 20px; */}
 .tk_addCart_btn button{display:block;width:197px;height:40px;/* background-color:transparent;background-image:url(../images/tk_addtocart_btn.png); */cursor:pointer;border:0;}
 
 .tk_suit{padding:85px 0 0;}
-.tk_suit_title p{font-size:24px;/* font-family:color:#373737;font-family:"Microsoft Yahei"; */font-weight:normal;padding:0 0 15px 25px;color:#323232;}
+.tk_suit_title p{font-size:24px;/* font-family:color:#373737;font-family:"Roboto", san serif; */font-weight:normal;padding:0 0 15px 25px;color:#323232;}
 .tk_suit_con li{float:left;padding:0 0 0 26px;position:relative;width:136px;}
 .tk_suit_con li:first-child{padding-left:0;}
 .tk_suitPro_img{width:136px;height:136px;overflow:hidden;border:1px solid transparent;opacity:0.6;filter:alpha(opacity=60);}
@@ -281,8 +281,8 @@ a.tk_order_submitBtn{display:inline-block;width:136px;height:48px;/* background-
 .tk_cart_totalCost em{font-size:24px;color:#323232;}
 .tk_cart_totalAccount{text-align:right;padding:28px 0 96px 0;}
 .tk_register{}
-.tk_register h2{text-align:center;margin:30px 0;font-size:23px;font-family:"Microsoft Yahei";}
-.tk_register p{text-align:center;font-size:19px;line-height:30px;color:#707070;font-family:"Microsoft Yahei";}
+.tk_register h2{text-align:center;margin:30px 0;font-size:23px;font-family:"Roboto", san serif;}
+.tk_register p{text-align:center;font-size:19px;line-height:30px;color:#707070;font-family:"Roboto", san serif;}
 .tk_register_container{width:582px;margin:36px auto 0;}
 .tk_register_item{margin-bottom:20px;}
 .tk_register_item input{width:580px;height:41px;border:1px solid #B8B7BD;border-radius:6px;padding:0 12px;line-height:41px; color:#707070;box-sizing:border-box; -moz-box-sizing:border-box; /* Firefox */ -webkit-box-sizing:border-box; /* Safari */}
@@ -301,7 +301,7 @@ a.tk_order_submitBtn{display:inline-block;width:136px;height:48px;/* background-
 .tk_accountNumber{float:right;line-height:27px;font-size:15px;}
 .tk_accountNumber a{color:#707070;}
 .tk_register_btn{text-align:center;padding:30px 0 50px 0;}
-.tk_register_submit{width:196px;height:50px;background-color:#B8B7BD;color:#323232;display:inline-block;font-size:19px;line-height:50px;border-radius:3px;font-family:"Microsoft Yahei";text-align:center;}
+.tk_register_submit{width:196px;height:50px;background-color:#B8B7BD;color:#323232;display:inline-block;font-size:19px;line-height:50px;border-radius:3px;font-family:"Roboto", san serif;text-align:center;}
 .tk_register_submit:hover{color:#333;}
 
 
@@ -328,10 +328,10 @@ input.tk_remember_pwd{width:28px;height:28px;position:absolute;left:0;top:0;z-in
 .tk_login_item input:focus{border-color:#FF8315;}
 .tk_login_item input:focus{border-color:#FF8315;}
 .tk_login_btn{text-align:right;}
-.tk_login_submit{width:99px;height:48px;background-color:#B8B7BD;color:#323232;display:inline-block;font-size:19px;line-height:50px;border-radius:3px;font-family:"Microsoft Yahei";text-align:center;}
+.tk_login_submit{width:99px;height:48px;background-color:#B8B7BD;color:#323232;display:inline-block;font-size:19px;line-height:50px;border-radius:3px;font-family:"Roboto", san serif;text-align:center;}
 .tk_register_area{padding:52px 0 0 97px;height:348px;width:426px;color:#707070;position:relative; /* box-sizing:border-box; -moz-box-sizing:border-box;  *//* Firefox */ /* -webkit-box-sizing:border-box; */ /* Safari */}
 .tk_register_area i{font-size:24px;margin-bottom:22px;font-style:normal;color:#323232;}
-.tk_register_area p{font-size:19px;color:#707070;line-height:30px;font-family:"Microsoft Yahei";margin:24px 0 60px 0;}
+.tk_register_area p{font-size:19px;color:#707070;line-height:30px;font-family:"Roboto", san serif;margin:24px 0 60px 0;}
 .tk_register_area a{font-size:15px;color:#707070;margin:0 0 0 70px;text-decoration:underline;}
 .tk_register_area a:hover{color:#FF8315;}
 .tk_register_serviceline{position:absolute;right:0;bottom:-30px;font-size:15px;}
@@ -371,7 +371,7 @@ a.tk_goods_payment{width:126px;height:46px;background-color:#B8B7BD;border-radiu
 .tk_nonpayment_page_prev,.tk_nonpayment_page_next{margin-left:10px;}
 
 .tk_account_setting{padding:0 16px;width:262px;border:1px solid #e0e0e0;margin-bottom:80px;box-sizing:border-box; -moz-box-sizing:border-box; /* Firefox */ -webkit-box-sizing:border-box; /* Safari */}
-.tk_account_setting h2,.tk_browse_recently h2{padding:16px 6px 10px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:normal;font-family:"Microsoft Yahei";}
+.tk_account_setting h2,.tk_browse_recently h2{padding:16px 6px 10px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:normal;font-family:"Roboto", san serif;}
 .tk_account_setting ul{padding:0 12px;}
 .tk_account_setting li{padding:8px 4px;border-bottom:1px dotted #e0e0e0;}
 .tk_account_setting li:last-child{border-bottom:0;}
@@ -384,7 +384,7 @@ a.tk_goods_payment{width:126px;height:46px;background-color:#B8B7BD;border-radiu
 .tk_browse_box{width:750px;padding:38px 0;margin:0 auto;overflow:hidden;}
 .tk_browse_box li{width:210px;float:left;padding:0 10px 0 30px;}
 .tk_browse_goodsImg{margin-bottom:20px;}
-.tk_browse_goodsImg img{margin:0 auto;}
+.tk_browse_goodsImg img{margin:0 auto; width: 100%}
 .tk_browse_goodsName{font-size:15px;margin-bottom:8px;}
 .tk_browse_goodsName a{color:#707070;}
 .tk_browse_goodsName a em{font-style:normal;font-weight:bold;color:#323232;padding:0 6px 0 0;}
@@ -400,7 +400,7 @@ a.tk_goods_payment{width:126px;height:46px;background-color:#B8B7BD;border-radiu
 
 /* .tk_cart_con{padding:0 10px;} */
 .tk_cartcon_top{padding:30px 0;}
-.tk_cartcon_top span{display:block;color:#707070;font-size:20px;font-family:"Microsoft Yahei";}
+.tk_cartcon_top span{display:block;color:#707070;font-size:20px;font-family: "Roboto", sans-serif;}
 
 .tk_cart_goodsInfo{float:left;width:550px;}
 .tk_cart_goodsPrice{float:left;width:185px;text-align:center;}
@@ -437,7 +437,7 @@ a.tk_goods_payment{width:126px;height:46px;background-color:#B8B7BD;border-radiu
 a.continue_shopping_btn{padding:0 0 0 30px;background:url(../images/tk_icon_home.png) no-repeat 0 center; }
 a.settleAccounts_btn{width:126px;height:48px; background-color:#B8B7BD;/*border:1px solid #A6A6A6; */border-radius:2px;text-align:center;line-height:48px;font-size:18px;margin-right:6px;color:#676767;display:inline-block;}
 
-.tk_order_hints,.tk_receiving_information,.tk_amount_payment{padding:22px 14px;border-bottom:1px solid #e0e0e0;font-family:"Microsoft Yahei";position:relative;color:#323232;}
+.tk_order_hints,.tk_receiving_information,.tk_amount_payment{padding:22px 14px;border-bottom:1px solid #e0e0e0;font-family:"Roboto", san serif;position:relative;color:#323232;}
 .tk_amount_payment{border-bottom:0;}
 .tk_order_hints i{display:block;font-size:22px;font-weight:normal;margin-bottom:6px;}
 .tk_order_hints p{font-size:18px;color:#707070;}
@@ -446,7 +446,7 @@ a.settleAccounts_btn{width:126px;height:48px; background-color:#B8B7BD;/*border:
 .tk_receiving_information a{font-size:15px;position:relative;right:-190px;color:#707070;}
 .tk_amount_payment em{font-size:18px;font-style:normal;font-weight:bold;color:#fd9d52;}
 .tk_submit_success{padding:70px 0;text-align:center;}
-.tk_submit_success strong,.tk_submit_success b,.tk_submit_success span{display:block;font-weight:normal;font-family:"Microsoft Yahei";line-height:36px;}
+.tk_submit_success strong,.tk_submit_success b,.tk_submit_success span{display:block;font-weight:normal;font-family:"Roboto", san serif;line-height:36px;}
 .tk_submit_success strong{font-size:22px;}
 .tk_submit_success b{font-size:18px;color:#fd9d52;}
 .tk_submit_success span{font-size:18px;color:#707070;}
