@@ -42,19 +42,32 @@ input.tk_search_txt:-ms-input-placeholder {
     text-align: center;
 }
 
-/*===========汤米妮琪单品页样式===========*/
+.w1190{
+    background: #FFF;
+}
+
 .w1110 {
     width: 1110px;
     margin: 0 auto;
+    border:0;
 }
+.mt26{
+    margin-top: 26px;
+}
+
 
 .tk_header {
     position: relative;
 }
 
+.tk_browse_recently h2{
+    border-bottom: 0;
+    font-size: 24px;
+    padding: 0 21px 15px;
+}
 .tk_logo {
     padding: 10px 0 0 0;
-    margin: 0 38.5px;
+    margin: 0 38px;
 }
 
 .tk_nav li {
@@ -76,8 +89,11 @@ input.tk_search_txt:-ms-input-placeholder {
     font-size: 13px;
     line-height: 58px;
     color: #666666;
+    font-weight: bold;
 }
-
+.tk_nav_name a:hover{
+    color: #8c8c8c;
+}
 .tk_nav li.tk_cur_nav .tk_nav_name {
     background-color: #fff;
     border-bottom: 1px solid #fff;
@@ -119,7 +135,6 @@ input.tk_search_txt:-ms-input-placeholder {
     display: block;
     float: left;
     font-size: 16px;
-    width: 83px;
     color: #323232;
     font-weight: bold;
 }
@@ -129,7 +144,7 @@ input.tk_search_txt:-ms-input-placeholder {
 }
 
 .tk_subnav_item {
-    width: 83px;
+    /*width: 83px;*/
     float: left;
 }
 
@@ -534,3 +549,202 @@ input.tk_search_txt:-ms-input-placeholder {
 .focus_btn ul li {
     float: left;
 }
+.clear{height: 10px}
+#tk_house_item64{
+    background-color:#DCDCDD;width:100%;margin-top:60px;
+}
+.tk_safety_quality {
+    background: url(../images/chatluongbg.png) no-repeat center center;
+    margin-top: 60px;
+}
+
+.tk_quality_box ul {
+    padding: 15% 0 3% 43%;
+}
+
+@media screen and (max-width: 1400px) {
+    .tk_quality_box ul {
+        padding: 15% 0 3% 45%;
+    }
+}
+
+.tk_quality_box li {
+    float: left;
+    margin: 0 14px 14px 0;
+    border-radius: 12px;
+    text-align: center; /*width:178px;height:160px;*/
+    width: 9.5vw;
+    height: 17.5vh;
+    min-width: 150px;
+    min-height: 140px;
+    padding-top: 42px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+}
+
+.tk_quality_box li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tk_quality_box li strong, .tk_quality_box li span {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Microsoft Yahei";
+}
+
+.tk_quality_box li strong {
+    font-size: 36px;
+    color: #F24B2B;
+}
+
+.tk_quality_box li span {
+    font-size: 24px;
+    color: #707070;
+}
+
+.tk_quality_box li {
+    width: 178px;
+    height: 160px;
+    border-radius: 12px;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.tk_quality_box .title_box {
+    background: #dddddd;
+}
+
+.tk_quality_box .cur_box .title_box {
+    background: #F24B2B;
+}
+
+.tk_quality_box .cur_box strong {
+    color: #fff;
+}
+
+.tk_quality_box .cur_box span {
+    color: #323232;
+}
+
+.tk_quality_box li strong {
+    padding-top: 42px;
+}
+
+.tk_quality_box .mask_box {
+    background: #f24b2b;
+}
+
+.tk_quality_box .mask_box p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 28px;
+    text-align: left;
+    padding: 20px 16px;
+}
+
+.cur_box .mask_box {
+    background: #ddd;
+}
+
+.cur_box .mask_box p {
+    color: #333;
+}
+.tk_browse_goodsName a{
+    text-decoration: none;
+    color:#323232;
+}
+.tk_bread_list{
+    padding: 0 10px 0 6px;
+    width:260px;
+}
+
+.tk_conpany {
+    margin: 0px auto;
+}
+
+.tk_company_news {
+    width: 452px;
+    margin-right: 260px;
+}
+
+.tk_news_top {
+    overflow: hidden;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0 0 12px 0;
+}
+
+.tk_news_top p {
+    background: url("../images/tintuc.png") left center no-repeat;
+    padding: 0 0 0 50px;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: 24px;
+    color: #323232;
+    font-family: "Roboto", sans-serif;
+    float: left;
+}
+
+.tk_news_top a {
+    float: right;
+    color: #fd8427;
+    font-size: 15px;
+    margin: 11px 0 0 0;
+}
+
+.tk_news_con {
+    padding: 14px 0 0 0;
+}
+
+.tk_news_con li {
+    line-height: 26px;
+    font-size: 15px;
+}
+
+.tk_news_con li a {
+    color: #505050;
+}
+
+.tk_news_con li a em {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 10px 0 0;
+    font-style: normal;
+}
+
+.tk_consult_top {
+    padding: 0 0 12px 0;
+    overflow: hidden;
+}
+
+.tk_consult_top p {
+    font-weight: normal;
+    padding: 0 0 0 48px;
+    background: url(../images/advisory.png) left center no-repeat;
+    line-height: 40px;
+    font-size: 24px;
+    color: #323232;
+    float: left;
+}
+
+.tk_consult_con {
+    font-size: 15px;
+    color: #505050;
+    line-height: 26px;
+}
+.footerBox{
+    background-color:#262626;margin-top:60px;padding-bottom:30px;
+}
+.footer{
+    width:1110px
+}
+.footerMenu dl{
+    width:222px;
+    padding-right:0
+}
+.footerMenu dl img{
+    width: 140px;
+}
+.icon{display: inline-block !important;}

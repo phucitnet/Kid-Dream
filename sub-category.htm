@@ -11,11 +11,6 @@
 
     <meta content="description">
     <meta content="Keywords">
-    <meta property="qc:admins" content="3511664676647675636">
-    <meta property="wb:webmaster" cont="" ent="f8f8be867e7e27b3">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-    <meta http-equiv="expires" content="0">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
@@ -30,34 +25,19 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <!--[if IE 7]>
-    <link rel="stylesheet" href="http://www.tomyniki.com/css/fontello-ie7.css">
+    <link rel="stylesheet" href="http://www.tomyniki.com/css/font-awesome.min-ie7.css">
     <![endif]-->
     <link rel="stylesheet" href="css/orange.css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/custom.css" type="text/css">
     <script src="js/html5element.js"></script>
-    <!--[if lt IE 10]>
-    <script type="text/javascript" src="http://www.tomyniki.com/js/PIE.js"></script>
-    <![endif]-->
-    <script language="javascript">
-        $(function () {
-            if (window.PIE) {
-                $('.rounded').each(function () {
-                    PIE.attach(this);
-                });
-            }
-        });
-    </script>
-    <style id="chartsContainerHeight">
-        .edui-chart-container {
-            height: 300px
-        }</style>
 </head>
-<body class="w1190" style="background-color:#FFFFFF;">
+<body class="w1190">
 
 
 <script type="text/javascript">
@@ -179,33 +159,29 @@
 </script>
 <div class="headerTop_w clearbox">
     <div class="headerTop">
-        <div class="headerTop_tips2"><span id="currentMember" class="dn"></span>Chào mừng bạn đến súp Thống
-            Qi!</div>
+        <div class="headerTop_tips2"><span id="currentMember" class="dn"></span>Chào mừng bạn đến với Kid dream!</div>
         <div class="headerTop_link">
             <ul>
-                <li id="login_span"><a href="javascript:void(0)" onclick="loginEnter()" title="">Đăng
-                    nhập</a> &nbsp;|&nbsp;</li>
-                <!-- <li id="dealer_span"><a href="javascript:void(0)" onclick="toEntLoginPage()">经销商订货</a>&nbsp;|&nbsp;</li> -->
-                <!-- <li id="ent_center"><a href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealerCenter/entCenter.do">企业会员中心</a>&nbsp;|&nbsp;</li>
-                <li id="ent_exit_span"><a href="javascript:void(0)" onclick="entLogout()">企业退出</a></li>  -->
-                <li id="register_span"><a href="javascript:void(0)" onclick="registerEnter()" title="">Đăng
-                    ký</a> &nbsp;|&nbsp;</li>
-                <li id="exit_span" class="dn" style="display: none;"><a href="javascript:void(0)"
-                                                                        onclick="logout()">thoát</a>
-                    &nbsp;|&nbsp;</li>
+                <li id="login_span">
+                    <a href="#" title="">Đăngnhập</a> &nbsp;|&nbsp;
+                </li>
+                <li id="register_span">
+                    <a href="#" title="">Đăng ký</a> &nbsp;|&nbsp;
+                </li>
+                <li id="exit_span" class="dn" style="display: none;">
+                    <a href="#">thoát</a>&nbsp;|&nbsp;
+                </li>
                 <li id="mem_center" class="dn" style="display: none;">
-                    <a href="javascript:void(0)" onclick="getMemberInfo()" title="">Trung tâm cá nhân</a>
-                    &nbsp;|&nbsp;
+                    <a href="javascript:void(0)" onclick="getMemberInfo()" title="">Trung tâm cá nhân</a>&nbsp;|&nbsp;
                 </li>
                 <li>
-                    <div class="tk_search"><a href="javascript:toSearch2();" class="tk_search_btn"></a><input
-                            class="tk_search_txt" type="text" placeholder="Tìm kiếm sản phẩm" value=""></div>
+                    <div class="tk_search">
+                        <a href="javascript:toSearch2();" class="tk_search_btn"></a>
+                        <input class="tk_search_txt" type="text" placeholder="Tìm kiếm sản phẩm" value="">
+                    </div>
                 </li>
                 <li class="english">
-                    <a href="http://en.tomyniki.com/" target="_blank" title="">
-                        <img src="images/eng.jpg">
-                        <p>ENG</p>
-                    </a>
+                    <a href="#" target="_blank" title=""><img src="images/eng.jpg"><p>ENG</p></a>
                 </li>
             </ul>
         </div>
@@ -217,8 +193,6 @@
 <script type="text/javascript">
 
     function getCoordinate(evnt) {
-
-        //var element=document.getElementById("header_link");
         var element = $("#header_link");
         if (document.all) {
             x = event.clientX;
@@ -228,18 +202,13 @@
             x = evnt.clientX;
             y = evnt.clientY;
         }
-        //status = "水平坐标："+ x + "；垂直坐标："+ y;
-        //alert(status)
         if (y < 10) {
-            //element.style.display='block';
             element.stop(true, true).slideDown();
         } else if (y > 88) {
-            //element.style.display='none';
             element.stop(true, true).slideUp();
         }
 
     }
-
     document.onmousemove = getCoordinate;
 </script>
 <script>
@@ -1140,7 +1109,8 @@
             <p>không gian</p>
             <!-- 二级 -->
             <div class="tk_sorting_list">
-                <p id="tkpid_146"><i class="icon-angle-right"></i>
+                <p id="tkpid_146">
+                    <i class="fa fa-caret-right"></i>
                     <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-94.html?pid=146"
                        target="_blank" style="display: inline;float: none;">
                         <span>em bé</span></a></p>
@@ -1163,7 +1133,7 @@
                 </ul>
             </div>
             <div class="tk_sorting_list">
-                <p id="tkpid_51"><i class="icon-angle-right"></i>
+                <p id="tkpid_51"><i class="fa fa-caret-right"></i>
                     <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-51.html?pid=51"
                        target="_blank" style="display: inline;float: none;">
                         <span>trường mầm non</span></a></p>
@@ -1198,7 +1168,7 @@
                 </ul>
             </div>
             <div class="tk_sorting_list">
-                <p id="tkpid_52"><i class="icon-angle-right"></i>
+                <p id="tkpid_52"><i class="fa fa-caret-right"></i>
                     <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-57.html?pid=52"
                        target="_blank" style="display: inline;float: none;">
                         <span>tiểu học</span></a></p>
@@ -1274,7 +1244,7 @@
                 </ul>
             </div>
             <div class="tk_sorting_list">
-                <p id="tkpid_53"><i class="icon-angle-right"></i>
+                <p id="tkpid_53"><i class="fa fa-caret-right"></i>
                     <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-54.html?pid=53"
                        target="_blank" style="display: inline;float: none;">
                         <span>trường trung học</span></a></p>
@@ -1316,7 +1286,7 @@
                 </ul>
             </div>
             <div class="tk_sorting_list">
-                <p id="tkpid_89"><i class="icon-angle-right"></i>
+                <p id="tkpid_89"><i class="fa fa-caret-right"></i>
                     <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-55.html?pid=89"
                        target="_blank" style="display: inline;float: none;">
                         <span>Countryside</span></a></p>
@@ -1352,7 +1322,7 @@
                 </ul>
             </div>
             <div class="tk_sorting_list">
-                <p id="tkpid_91"><i class="icon-angle-right"></i>
+                <p id="tkpid_91"><i class="fa fa-caret-right"></i>
                     <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-56.html?pid=91"
                        target="_blank" style="display: inline;float: none;">
                         <span>cây thông</span></a></p>
@@ -1403,7 +1373,7 @@
             <!-- 二级 -->
             <div class="tk_sorting_box">
                 <div class="tk_sorting_list">
-                    <p id="tkpid_3"><i class="icon-angle-right"></i>
+                    <p id="tkpid_3"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-1.html?pid=3"
                            target="_blank" style="display: inline;float: none;">
                             <span>giường đơn</span></a></p>
@@ -1430,7 +1400,7 @@
                     </ul>
                 </div>
                 <div class="tk_sorting_list">
-                    <p id="tkpid_6"><i class="icon-angle-right"></i>
+                    <p id="tkpid_6"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-46.html?pid=6"
                            target="_blank" style="display: inline;float: none;">
                             <span>giường chức năng</span></a></p>
@@ -1454,7 +1424,7 @@
                     </ul>
                 </div>
                 <div class="tk_sorting_list">
-                    <p id="tkpid_4"><i class="icon-angle-right"></i>
+                    <p id="tkpid_4"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-3.html?pid=4"
                            target="_blank" style="display: inline;float: none;">
                             <span>quần áo</span></a></p>
@@ -1483,7 +1453,7 @@
                     </ul>
                 </div>
                 <div class="tk_sorting_list">
-                    <p id="tkpid_5"><i class="icon-angle-right"></i>
+                    <p id="tkpid_5"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-12.html?pid=5"
                            target="_blank" style="display: inline;float: none;">
                             <span>Bàn ghế</span></a></p>
@@ -1513,7 +1483,7 @@
                     </ul>
                 </div>
                 <div class="tk_sorting_list">
-                    <p id="tkpid_7"><i class="icon-angle-right"></i>
+                    <p id="tkpid_7"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-10.html?pid=7"
                            target="_blank" style="display: inline;float: none;">
                             <span>tủ khóa</span></a></p>
@@ -1553,7 +1523,7 @@
             </div>
             <div class="tk_sorting_box">
                 <div class="tk_sorting_list">
-                    <p id="tkpid_123"><i class="icon-angle-right"></i>
+                    <p id="tkpid_123"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-4.html?pid=123"
                            target="_blank" style="display: inline;float: none;">
                             <span>đồ nội thất nhỏ</span></a></p>
@@ -1572,7 +1542,7 @@
                     </ul>
                 </div>
                 <div class="tk_sorting_list">
-                    <p id="tkpid_112"><i class="icon-angle-right"></i>
+                    <p id="tkpid_112"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-9.html?pid=112"
                            target="_blank" style="display: inline;float: none;">
                             <span>nệm</span></a></p>
@@ -1595,7 +1565,7 @@
                     </ul>
                 </div>
                 <div class="tk_sorting_list">
-                    <p id="tkpid_173"><i class="icon-angle-right"></i>
+                    <p id="tkpid_173"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-6.html?pid=173"
                            target="_blank" style="display: inline;float: none;">
                             <span>spinning</span></a></p>
@@ -1626,7 +1596,7 @@
             </div>
             <div class="tk_sorting_box">
                 <div class="tk_sorting_list">
-                    <p id="tkpid_135"><i class="icon-angle-right"></i>
+                    <p id="tkpid_135"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-5.html?pid=135"
                            target="_blank" style="display: inline;float: none;">
                             <span>Văn phòng phẩm</span></a></p>
@@ -1673,7 +1643,7 @@
             </div>
             <div class="tk_sorting_box">
                 <div class="tk_sorting_list">
-                    <p id="tkpid_199"><i class="icon-angle-right"></i>
+                    <p id="tkpid_199"><i class="fa fa-caret-right"></i>
                         <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-8.html?pid=199"
                            target="_blank" style="display: inline;float: none;">
                             <span>đời sống</span></a></p>
@@ -1708,10 +1678,10 @@
                 var showOrHideEle = $(this).siblings("ul");
                 if (showOrHideEle.hasClass("tk_sort_detail")) {
                     showOrHideEle.stop(true, true).slideDown().removeClass("tk_sort_detail");
-                    $(this).children("i").removeClass("icon-angle-right").addClass("icon-angle-down");
+                    $(this).children("i").removeClass("fa fa-caret-right").addClass("icon-angle-down");
                 } else {
                     showOrHideEle.stop(true, true).slideUp().addClass("tk_sort_detail");
-                    $(this).children("i").addClass("icon-angle-right").removeClass("icon-angle-down");
+                    $(this).children("i").addClass("fa fa-caret-right").removeClass("icon-angle-down");
                 }
             });
             function GetRequest() {
@@ -1731,7 +1701,7 @@
                         var tk = $("#tkli_" + id);
                         tk.parent().stop(true, true).slideDown().removeClass("tk_sort_detail");
                         tk.parent().removeClass("dn");
-                        tk.parent().parent().children("p").children("i").addClass("icon-angle-down").removeClass("icon-angle-right");
+                        tk.parent().parent().children("p").children("i").addClass("icon-angle-down").removeClass("fa fa-caret-right");
                         tk.parent().parent().children("p").children("a").children("span").addClass("tk_sel_status");
                         tk.find("a").addClass("tk_sel_status").removeClass("no_set")
                     }
@@ -1739,7 +1709,7 @@
                     var tkp = $("#tkpid_" + pid);
                     tkp.children("a").children("span").addClass("tk_sel_status");
                     tkp.siblings("ul").stop(true, true).slideDown().removeClass("tk_sort_detail");
-                    tkp.children("i").removeClass("icon-angle-right").addClass("icon-angle-down");
+                    tkp.children("i").removeClass("fa fa-caret-right").addClass("icon-angle-down");
                 }
 
                 return theRequest;
@@ -1784,7 +1754,7 @@
                         <div class="clo_product_txt fl">
                             <p>
                             </p>
-                            <div class="tk_pro_salePrice">¥ 1999</div>
+                            <div class="tk_pro_salePrice"> 1,999,000 đ</div>
                             <!-- <div class="tk_pro_marketPrice">市场价：<span style="color: #707070;">1999</span></div>  -->
                             <p></p>
                         </div>
@@ -1813,7 +1783,7 @@
                         <div class="clo_product_txt fl">
                             <p>
                             </p>
-                            <div class="tk_pro_salePrice">¥ 3199</div>
+                            <div class="tk_pro_salePrice"> 3,199,000 đ</div>
                             <!-- <div class="tk_pro_marketPrice">市场价：<span style="color: #707070;">3199</span></div>  -->
                             <p></p>
                         </div>
@@ -1840,7 +1810,7 @@
                         <div class="clo_product_txt fl">
                             <p>
                             </p>
-                            <div class="tk_pro_salePrice">¥ 1599</div>
+                            <div class="tk_pro_salePrice"> 1,599,000 đ</div>
                             <!-- <div class="tk_pro_marketPrice">市场价：<span style="color: #707070;">1599</span></div>  -->
                             <p></p>
                         </div>
@@ -1869,7 +1839,7 @@
                         <div class="clo_product_txt fl">
                             <p>
                             </p>
-                            <div class="tk_pro_salePrice">¥ 2299</div>
+                            <div class="tk_pro_salePrice"> 2,299,000 đ</div>
                             <!-- <div class="tk_pro_marketPrice">市场价：<span style="color: #707070;">2299</span></div>  -->
                             <p></p>
                         </div>

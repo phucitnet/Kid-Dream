@@ -11,11 +11,6 @@
 
     <meta content="description">
     <meta content="Keywords">
-    <meta property="qc:admins" content="3511664676647675636">
-    <meta property="wb:webmaster" cont="" ent="f8f8be867e7e27b3">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-    <meta http-equiv="expires" content="0">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
@@ -30,85 +25,21 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!--[if IE 7]>
-    <link rel="stylesheet" href="http://www.tomyniki.com/css/fontello-ie7.css">
+    <link rel="stylesheet" href="http://www.tomyniki.com/css/font-awesome.min-ie7.css">
     <![endif]-->
     <link rel="stylesheet" href="css/orange.css">
     <link href="css/base.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/tomyniki.css">
     <link rel="stylesheet" href="css/custom.css" type="text/css">
     <script src="js/html5element.js"></script>
-    <!--[if lt IE 10]>
-    <script type="text/javascript" src="http://www.tomyniki.com/js/PIE.js"></script>
-    <![endif]-->
-    <script language="javascript">
-        $(function () {
-            if (window.PIE) {
-                $('.rounded').each(function () {
-                    PIE.attach(this);
-                });
-            }
-        });
-    </script>
-    <style id="chartsContainerHeight">
-        .edui-chart-container {
-            height: 300px
-        }</style>
 </head>
-<body class="w1190" style="background-color:#FFFFFF;">
-
-
-
+<body class="w1190">
 <script type="text/javascript">
     $(function () {
-        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getCurrentMember.do", null, function (data) {
-            if (data == -1) {
-                $("#login_span").show();
-                $("#register_span").show();
-                $("#exit_span").hide();
-                $("#mem_center").hide();
-            } else {
-                $("#mem_center").show();
-                $("#exit_span").show();
-                $("#currentMember").html(data);
-                $("#login_span").hide();
-                $("#register_span").hide();
-            }
-        });
-
-        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/checkUserType.do", null, function (data) {
-            if (data == "member") {
-                $("#ent_center").hide();
-                $("#ent_exit_span").hide();
-            }
-            if (data == "entUser") {
-                $("#login_span").hide();
-                $("#register_span").hide();
-                $("#exit_span").hide();
-                $("#collect_span").hide();
-                $("#mem_center").hide();
-            }
-        });
-
-        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/getCurrentName.do", null, function (data) {
-            if (data != -1) {
-                $("#currentMember").html("企业用户:" + data);
-            }
-        });
-
-        $(".page-top .cart").click(function () {
-            window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/cart.do";
-        });
-        $(".page-top .order").click(function () {
-            window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/myOrder/1.do";
-        });
-        $(".page-top .member").click(function () {
-            window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getMemberInfo.do?member=get";
-        });
-        window.setTimeout("keepSession()", 600000);
-
         $("#bannerPic").click(function () {
             $("#b").fadeOut();
             $("#bannerPic").fadeOut(500);
@@ -133,80 +64,32 @@
         });
     });
 
-
-    function loginEnter() {
-        var redirect = encodeURIComponent(window.location.href);
-        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/login.do?redirect=" + redirect;
-    }
-    function registerEnter() {
-        var redirect = encodeURIComponent(window.location.href);
-        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/register.do?redirect=" + redirect;
-    }
-    function logout() {
-        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/logout.do", null, function (data) {
-            window.location.href = window.location.href;
-        });
-    }
-    function keepSession() {
-        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/keepSession.do", null, function (data) {
-
-        });
-        window.setTimeout("keepSession()", 600000);
-    }
-
-    function getMemberInfo() {
-        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getMemberInfo.do?member=get";
-    }
-    function getProductCollect() {
-        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/getProductCollect/1.do";
-    }
-    function toEntLoginPage() {
-        window.location.href = "http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/toLoginPage.do";
-    }
-
-    function entLogout() {
-        private_ajax("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealer/entLogout.do", null, function (data) {
-            if (data) {
-                window.location.href = "http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html";
-            }
-        });
-    }
-    function toSearch2() {
-        var productKey = $(".tk_search_txt").val();
-        if (productKey != null && productKey != "") {
-            window.open("http://www.tomyniki.com/8af4f97851286013015128b2cb010000/productSearch/1.do?productKey=" + productKey);
-        }
-    }
 </script>
 <div class="headerTop_w clearbox">
     <div class="headerTop">
-        <div class="headerTop_tips2"><span id="currentMember" class="dn"></span><font><font>Chào mừng bạn đến súp Thống
-            Qi!</font></font></div>
+        <div class="headerTop_tips2"><span id="currentMember" class="dn"></span>Chào mừng bạn đến với Kid dream!</div>
         <div class="headerTop_link">
             <ul>
-                <li id="login_span"><a href="javascript:void(0)" onclick="loginEnter()" title=""><font><font>Đăng
-                    nhập</font></font></a><font><font> &nbsp;|&nbsp;</font></font></li>
-                <!-- <li id="dealer_span"><a href="javascript:void(0)" onclick="toEntLoginPage()">经销商订货</a>&nbsp;|&nbsp;</li> -->
-                <!-- <li id="ent_center"><a href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/dealerCenter/entCenter.do">企业会员中心</a>&nbsp;|&nbsp;</li>
-                <li id="ent_exit_span"><a href="javascript:void(0)" onclick="entLogout()">企业退出</a></li>  -->
-                <li id="register_span"><a href="javascript:void(0)" onclick="registerEnter()" title=""><font><font>Đăng
-                    ký</font></font></a><font><font> &nbsp;|&nbsp;</font></font></li>
-                <li id="exit_span" class="dn" style="display: none;"><a href="javascript:void(0)"
-                                                                        onclick="logout()"><font><font>thoát</font></font></a><font><font>
-                    &nbsp;|&nbsp;</font></font></li>
+                <li id="login_span">
+                    <a href="#" title="">Đăngnhập</a> &nbsp;|&nbsp;
+                </li>
+                <li id="register_span">
+                    <a href="#" title="">Đăng ký</a> &nbsp;|&nbsp;
+                </li>
+                <li id="exit_span" class="dn" style="display: none;">
+                    <a href="#">thoát</a>&nbsp;|&nbsp;
+                </li>
                 <li id="mem_center" class="dn" style="display: none;">
-                    <a href="javascript:void(0)" onclick="getMemberInfo()" title=""><font><font>Trung tâm cá nhân</font></font></a><font><font>
-                    &nbsp;|&nbsp;
-                </font></font></li>
+                    <a href="javascript:void(0)" onclick="getMemberInfo()" title="">Trung tâm cá nhân</a>&nbsp;|&nbsp;
+                </li>
                 <li>
-                    <div class="tk_search"><a href="javascript:toSearch2();" class="tk_search_btn"></a><input
-                            class="tk_search_txt" type="text" placeholder="TÌm kiếm sản phẩm" value=""></div>
+                    <div class="tk_search">
+                        <a href="javascript:toSearch2();" class="tk_search_btn"></a>
+                        <input class="tk_search_txt" type="text" placeholder="Tìm kiếm sản phẩm" value="">
+                    </div>
                 </li>
                 <li class="english">
-                    <a href="http://en.tomyniki.com/" target="_blank" title="">
-                        <img src="images/eng.jpg">
-                        <p><font><font>ENG</font></font></p>
-                    </a>
+                    <a href="#" target="_blank" title=""><img src="images/eng.jpg"><p>ENG</p></a>
                 </li>
             </ul>
         </div>
@@ -214,10 +97,7 @@
 </div>
 
 <script type="text/javascript">
-
     function getCoordinate(evnt) {
-
-        //var element=document.getElementById("header_link");
         var element = $("#header_link");
         if (document.all) {
             x = event.clientX;
@@ -227,18 +107,12 @@
             x = evnt.clientX;
             y = evnt.clientY;
         }
-        //status = "水平坐标："+ x + "；垂直坐标："+ y;
-        //alert(status)
         if (y < 10) {
-            //element.style.display='block';
             element.stop(true, true).slideDown();
         } else if (y > 88) {
-            //element.style.display='none';
             element.stop(true, true).slideUp();
         }
-
     }
-
     document.onmousemove = getCoordinate;
 </script>
 <script>
@@ -309,770 +183,147 @@
     <div class="tk_nav fl">
         <ul class="clearbox">
             <li>
-                <div class="tk_nav_name"><a style="color:#;"
-                                            href="product-category.htm"
-                                            target="_self">Trẻ sơ sinh</a></div>
+                <div class="tk_nav_name"><a href="product-category.htm" target="_self">Trẻ sơ sinh</a></div>
             </li>
-
-
             <li>
-                <div class="tk_nav_name"><a style="color:#;"
-                                            href="product-category.htm"
-                                            target="_self">Mầm non</a></div>
+                <div class="tk_nav_name"><a href="product-category.htm" target="_self">Mầm non</a></div>
             </li>
-
-
             <li>
-                <div class="tk_nav_name"><a style="color:#;"
-                                            href="product-category.htm"
-                                            target="_self">Tiểu học</a></div>
+                <div class="tk_nav_name"><a href="product-category.htm" target="_self">Tiểu học</a></div>
             </li>
-
-
             <li>
-                <div class="tk_nav_name"><a style="color:#;"
-                                            href="product-category.htm"
-                                            target="_self">Trung học</a></div>
+                <div class="tk_nav_name"><a href="product-category.htm" target="_self">Trung học</a></div>
             </li>
-
-
             <li>
-                <div class="tk_nav_name"><a style="color:#;"
-                                            href="product-category.htm"
-                                            target="_self">Countryside</a></div>
+                <div class="tk_nav_name"><a href="product-category.htm" target="_self">Countryside</a></div>
             </li>
-
-
             <li>
-                <div class="tk_nav_name"><a style="color:#;"
-                                            href="product-category.htm"
-                                            target="_self">Gỗ thông</a></div>
+                <div class="tk_nav_name"><a href="product-category.htm" target="_self">Gỗ thông</a></div>
             </li>
-
-
             <li class="tk_nav_txt">
                 <div class="tk_nav_name" id="tk_nav_category"><a
-                        href="sub-category.htm">Tất
-                    cả sản phẩm</a></div>
+                        href="sub-category.htm">Tất cả sản phẩm</a></div>
                 <div class="tk_nav_sort clearbox dn" style="display: none;">
 
-
                     <div class="tk_subnav">
-
                         <div class="tk_subnav_caption">
-
-
-                            <strong>
-
-
-                                <a href="sub-category.htm"
-                                   target="_blank">Single bed </a>
-
-
-                            </strong>
-
-
-                            <strong><a
-                                    href="sub-category.htm"
-                                    target="_blank">tính năng giường </a></strong><strong><a
-                                href="sub-category.htm"
-                                target="_blank">tủ </a></strong><strong><a
-                                href="sub-category.htm"
-                                target="_blank">bàn ghế </a></strong><strong style="width: auto;"><a
-                                href="sub-category.htm"
-                                target="_blank">tủ</a></strong><strong>
-                            <a href="sub-category.htm"
-                               target="_blank"></a>
-                        </strong>
-                            <strong>
-                                <a href="sub-category.htm" target="_blank"></a>
-                            </strong>
                             <strong>
                                 <a href="sub-category.htm"
-                                   target="_blank"></a>
-
-
+                                   target="_blank">Giường đơn</a>
                             </strong>
-
-
-                            <strong style="width: auto;"><!-- 最后一个节点 -->
-
-
-                                <a href="sub-category.htm"
-                                   target="_blank"></a>
-
-
-                            </strong>
-
                         </div>
                         <div class="tk_subnav_detail clearbox">
 
 
                             <div class="tk_subnav_item">
+                                <span><a href="sub-category.htm"target="_blank">Giường đơn </a></span>
 
-
-
-							                                 	 	<span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank">Giường đơn </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="sub-category.htm"
-                                        target="_blank">Air giường ngủ </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">sofa giường </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">nôi</a></span><span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
+                                <span><a href="sub-category.htm" target="_blank">Air giường ngủ </a></span>
+                                <span><a href="sub-category.htm" target="_blank">sofa giường </a></span>
+                                <span><a href="sub-category.htm" target="_blank">nôi</a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
 
                             </div>
-
-
-                            <div class="tk_subnav_item">
-
-
-
-							                                 	 	<span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank">Giường tầng </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="sub-category.htm"
-                                        target="_blank">Bookshelf giường </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">ngủ loft</a></span><span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                            </div>
-
-
-                            <div class="tk_subnav_item">
-
-
-
-							                                 	 	<span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank">Hai tủ quần áo </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="sub-category.htm"
-                                        target="_blank">ba tủ quần áo </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">bốn tủ quần áo </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">tủ quần áo cửa trượt</a></span><span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                            </div>
-
-
-                            <div class="tk_subnav_item">
-
-
-
-							                                 	 	<span>
-
-
-
-																	     	 	<a href="sub-category.htm"
-                                                                                   target="_blank">Bàn kết hợp </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="sub-category.htm"
-                                        target="_blank">bàn </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">tủ </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">ghế </a></span><span><a
-                                    href="sub-category.htm"
-                                    target="_blank">ghế gỗ</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-55.html?id=87"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-51.html?id=110"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-35.html?id=206"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-25.html?id=207"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                            </div>
-
-
-                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
-
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-44.html?id=26"
-                                                                                   target="_blank">Bedside </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-43.html?id=27"
-                                        target="_blank">Chests </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-42.html?id=28"
-                                        target="_blank">hoạt động nội các </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-41.html?id=74"
-                                        target="_blank">tủ khóa </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-11.html?id=111"
-                                        target="_blank">tủ sách </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-63.html?id=156"
-                                        target="_blank">gương trang điểm</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-43.html?id=27"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-42.html?id=28"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-41.html?id=74"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-11.html?id=111"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-63.html?id=156"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                            </div>
-
-                        </div>
                     </div>
-
-
-                    <!-- 三级 -->
-
-
+                    </div>
                     <div class="tk_subnav">
-
                         <div class="tk_subnav_caption">
-
-
                             <strong>
-
-
-                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-4.html?pid=123"
-                                   target="_blank">đồ nội thất nhỏ </a>
-
-
+                                <a href="sub-category.htm"
+                                   target="_blank">Bàn ghế </a>
                             </strong>
-
-
-                            <strong><a
-                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-9.html?pid=112"
-                                    target="_blank">nệm </a></strong><strong style="width: auto;"><a
-                                href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-6.html?pid=173"
-                                target="_blank">dệt may</a></strong><strong>
-
-
-                            <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-9.html?pid=112"
-                               target="_blank"></a>
-
-
-                        </strong>
-
-
-                            <strong style="width: auto;"><!-- 最后一个节点 -->
-
-
-                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-6.html?pid=173"
-                                   target="_blank"></a>
-
-
-                            </strong>
-
                         </div>
                         <div class="tk_subnav_detail clearbox">
 
 
                             <div class="tk_subnav_item">
+                                <span><a href="sub-category.htm"target="_blank">Giường đơn </a></span>
 
-
-
-							                                 	 	<span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-16.html?id=166"
-                                                                                   target="_blank">sofa nhỏ </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-14.html?id=157"
-                                        target="_blank">bàn nhỏ và ghế</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-14.html?id=157"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
+                                <span><a href="sub-category.htm" target="_blank">Air giường ngủ </a></span>
+                                <span><a href="sub-category.htm" target="_blank">sofa giường </a></span>
+                                <span><a href="sub-category.htm" target="_blank">nôi</a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
 
                             </div>
-
-
-                            <div class="tk_subnav_item">
-
-
-
-							                                 	 	<span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-40.html?id=113"
-                                                                                   target="_blank">Sợi nệm </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-38.html?id=115"
-                                        target="_blank">bọt nệm </a></span><span><a
-                                    href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-37.html?id=116"
-                                    target="_blank">nệm lò xo</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-38.html?id=115"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-37.html?id=116"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                            </div>
-
-
-                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
-
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-24.html?id=174"
-                                                                                   target="_blank">Bộ đồ giường </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-22.html?id=175"
-                                        target="_blank">Gối </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-23.html?id=176"
-                                        target="_blank">Gối </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-21.html?id=177"
-                                        target="_blank">Chăn</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-22.html?id=175"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-23.html?id=176"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-21.html?id=177"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                            </div>
-
                         </div>
                     </div>
-
-
-                    <!-- 三级 -->
-
-
                     <div class="tk_subnav">
-
                         <div class="tk_subnav_caption">
-
-
-                            <strong style="width: auto;"><!-- 最后一个节点 -->
-
-
-                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-5.html?pid=135"
-                                   target="_blank">Văn phòng phẩm</a>
-
-
+                            <strong>
+                                <a href="sub-category.htm"
+                                   target="_blank">Tủ </a>
                             </strong>
-
                         </div>
                         <div class="tk_subnav_detail clearbox">
 
 
-                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
+                            <div class="tk_subnav_item">
+                                <span><a href="sub-category.htm"target="_blank">Giường đơn </a></span>
 
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-57.html?id=152"
-                                                                                   target="_blank">Máy tính xách tay </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-59.html?id=153"
-                                        target="_blank">lưu trữ </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-19.html?id=136"
-                                        target="_blank">bút </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-18.html?id=137"
-                                        target="_blank">túi </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-61.html?id=183"
-                                        target="_blank">đèn </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-70.html?id=217"
-                                        target="_blank">công cụ bán hàng </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-73.html?id=225"
-                                        target="_blank">prop </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-74.html?id=227"
-                                        target="_blank">liệu máy bay</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-59.html?id=153"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-19.html?id=136"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-18.html?id=137"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-61.html?id=183"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-70.html?id=217"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-73.html?id=225"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-74.html?id=227"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
+                                <span><a href="sub-category.htm" target="_blank">Air giường ngủ </a></span>
+                                <span><a href="sub-category.htm" target="_blank">sofa giường </a></span>
+                                <span><a href="sub-category.htm" target="_blank">nôi</a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
 
                             </div>
-
                         </div>
                     </div>
-
-
-                    <!-- 三级 -->
-
-                    <div class="tk_subnav tk_subnav_lastchild"><!-- 最后一个节点 -->
-
-
+                    <div class="tk_subnav">
                         <div class="tk_subnav_caption">
-
-
-                            <strong style="width: auto;"><!-- 最后一个节点 -->
-
-
-                                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-8.html?pid=199"
-                                   target="_blank">đời sống</a>
-
-
+                            <strong>
+                                <a href="sub-category.htm"
+                                   target="_blank">Đồ nội thất </a>
                             </strong>
-
                         </div>
                         <div class="tk_subnav_detail clearbox">
 
 
-                            <div class="tk_subnav_item tk_subnav_item_lastchild"><!-- 最后一个节点 -->
+                            <div class="tk_subnav_item">
+                                <span><a href="sub-category.htm"target="_blank">Giường đơn </a></span>
 
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-62.html?id=201"
-                                                                                   target="_blank">Khăn </a>
-
-
-														     	 	</span>
-
-                                <span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-67.html?id=200"
-                                        target="_blank">choàng tắm </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-20.html?id=204"
-                                        target="_blank">thảm </a></span><span><a
-                                        href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-66.html?id=205"
-                                        target="_blank">cốc</a></span><span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-67.html?id=200"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-20.html?id=204"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
-
-                                <span>
-
-
-
-																	     	 	<a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-66.html?id=205"
-                                                                                   target="_blank"></a>
-
-
-														     	 	</span>
+                                <span><a href="sub-category.htm" target="_blank">Air giường ngủ </a></span>
+                                <span><a href="sub-category.htm" target="_blank">sofa giường </a></span>
+                                <span><a href="sub-category.htm" target="_blank">nôi</a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
 
                             </div>
+                        </div>
+                    </div>
+                    <div class="tk_subnav">
+                        <div class="tk_subnav_caption">
+                            <strong>
+                                <a href="sub-category.htm"
+                                   target="_blank">Văn phòng phẩm </a>
+                            </strong>
+                        </div>
+                        <div class="tk_subnav_detail clearbox">
 
+
+                            <div class="tk_subnav_item">
+                                <span><a href="sub-category.htm"target="_blank">Giường đơn </a></span>
+
+                                <span><a href="sub-category.htm" target="_blank">Air giường ngủ </a></span>
+                                <span><a href="sub-category.htm" target="_blank">sofa giường </a></span>
+                                <span><a href="sub-category.htm" target="_blank">nôi</a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+                                <span><a href="sub-category.htm" target="_blank"></a></span>
+
+                            </div>
                         </div>
                     </div>
 
 
                 </div>
             </li>
-
-
         </ul>
     </div>
     <div class="tk_cart fl">
@@ -1090,49 +341,42 @@
 
                 </ul>
                 <div class="tk_account_btn"><a
-                        href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/selectCartItem.do">Thanh
-                    toán</a></div>
+                        href="#">Thanh toán</a></div>
             </div>
             <nav class="tk_shopcart_nav">
                 <ul>
                     <li onclick="toCart()">
-                        <div class="tk_shopcart_item tk_shopcart_cart">Giỏ hàng <span
-                                id="tk_shopcart_cart">(0)</span></div>
+                        <div class="tk_shopcart_item tk_shopcart_cart">Giỏ hàng <span id="tk_shopcart_cart">(0)</span></div>
                     </li>
 
                     <li>
-                        <div class="tk_shopcart_item tk_shopcart_phone">
-                            <span>400-8300-456</span></div>
+                        <div class="tk_shopcart_item tk_shopcart_phone"><span>400-8300-456</span></div>
                     </li>
                     <li>
-
-
-                        <a target="_blank"
-                           href="http://wpa.qq.com/msgrd?v=3&amp;uin=2449332488&amp;site=qq&amp;menu=yes">
-                            <div class="tk_shopcart_item tk_shopcart_consult">Tư vấn trực
-                                tuyến
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2449332488&amp;site=qq&amp;menu=yes">
+                            <div class="tk_shopcart_item tk_shopcart_consult">
+                                Tư vấn trực tuyến
                             </div>
                         </a>
-
-
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
 </div>
-<div class="clear" style="height:10px;"></div>
+<div class="clear"></div>
 <div class="index_focus" id="index_focus">
     <div class="focus_pic">
         <ul style="width: 300%; left: -100%;">
-            <li style="width: 33.3333%;"><a
-                    href="product-category.htm"><img
-                    src="images/62592dd8eb2d4f59bcf00822239605b9.jpg"></a></li>
-            <li style="width: 33.3333%;"><a
-                    href="product-category.htm"><img
-                    src="images/755e995324c84e1d915dbcff3350c418.jpg"></a></li>
-            <li style="width: 33.3333%;"><a href="product-category.htm"> <img
-                    src="images/6b408513d65948ff81dce604a11389a6.jpg"></a></li>
+            <li style="width: 33.3333%;">
+                <a href="product-category.htm"><img src="images/62592dd8eb2d4f59bcf00822239605b9.jpg"></a>
+            </li>
+            <li style="width: 33.3333%;">
+                <a href="product-category.htm"><img src="images/755e995324c84e1d915dbcff3350c418.jpg"></a>
+            </li>
+            <li style="width: 33.3333%;">
+                <a href="product-category.htm"> <img src="images/6b408513d65948ff81dce604a11389a6.jpg"></a>
+            </li>
         </ul>
     </div>
     <div class="focus_btn">
@@ -1163,99 +407,68 @@
     })
 </script>
 
-
-<!-- 幻灯放在右边 -->
-<div class="tk_house clearbox" id="tk_house_item64" style="background-color:#DCDCDD;width:100%;margin-top:60px;">
+<div class="tk_house clearbox" id="tk_house_item64">
     <div class="tk_house_bg tk_housebg_fl" style="width:45%;">
-        <div class="tk_house_txt"><img
-                src="images/52fd0994e6464639a13333a41a3a504f.png"></div>
-        <!--  <div class="tk_house_trianglebg" style="border-color:transparent transparent transparent #DCDCDD;"></div>
-         <div class="tk_house_triangletxt">幼儿</div> -->
+        <div class="tk_house_txt"><img src="images/52fd0994e6464639a13333a41a3a504f.png"></div>
     </div>
     <div class="tk_house_img tk_houseImg_fl" style="width:55%;">
         <div class="tk_house_box">
             <div class="tk_house_container clearbox" style="width: 3192px;">
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-65.html" title=""
-                       target="_self"><img
-                            src="images/f92a986b2d3b4e49874b81f507864842.png"></a>
+                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-65.html" title="" target="_self"><img src="images/f92a986b2d3b4e49874b81f507864842.png"></a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-67.html" title=""
-                       target="_self"><img
-                            src="images/b5654e17729641a7869ff5580e5a6e01.jpg"></a>
+                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-67.html" title="" target="_self"><img src="images/b5654e17729641a7869ff5580e5a6e01.jpg"></a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-74.html" title=""
-                       target="_self"><img
-                            src="images/c21918e7a76b4729a910c2ae00a2a896.jpg"></a>
+                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-74.html" title="" target="_self"><img src="images/c21918e7a76b4729a910c2ae00a2a896.jpg"></a>
                 </div>
-                <div class="tk_house_item" style="width: 798px;"><img
-                        src="images/f92a986b2d3b4e49874b81f507864842.png"></div>
+                <div class="tk_house_item" style="width: 798px;"><img src="images/f92a986b2d3b4e49874b81f507864842.png"></div>
             </div>
         </div>
         <span class="tk_house_arrow" id="tk_house_arrow64"></span>
     </div>
 </div>
-<input type="hidden" id="house_item_0" value="64" alig="fl">
+<input type="hidden" id="house_item_0" value="64" align="fl">
 
 
 <div class="tk_house clearbox" id="tk_house_item65" style="background-color:#DCDCDD;width:100%;margin-top:60px;">
     <div class="tk_house_bg tk_housebg_fr" style="width:45%;">
-        <div class="tk_house_txt"><img
-                src="images/51cc90e82dc6406aaa1e0c60d1c0a488.png"></div>
-        <!--  <div class="tk_house_trianglebg" style="border-color:transparent #DCDCDD transparent transparent;"></div>
-         <div class="tk_house_triangletxt">彩色 </div> -->
+        <div class="tk_house_txt"><img src="images/51cc90e82dc6406aaa1e0c60d1c0a488.png"></div>
     </div>
     <div class="tk_house_img tk_houseImg_fr" style="width:55%;">
         <div class="tk_house_box">
             <div class="tk_house_container clearbox" style="width: 3990px;">
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-44.html" title=""
-                       target="_self"><img
-                            src="images/d6ee9ecf06f34afa815cb2ba95f61cee.jpg"></a>
+                    <a href="#" title="" target="_self"><img src="images/d6ee9ecf06f34afa815cb2ba95f61cee.jpg"></a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-66.html" title=""
-                       target="_self"><img
-                            src="images/4dcd4cb85367458ebf90b37fe203f552.jpg"></a>
+                    <a href="#" title="" target="_self"><img src="images/4dcd4cb85367458ebf90b37fe203f552.jpg"></a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-81.html" title=""
-                       target="_self"><img
-                            src="images/579ed020eae04d09b8803e7851dfc2c8.jpg"></a>
+                    <a href="#" title="" target="_self"><img src="images/579ed020eae04d09b8803e7851dfc2c8.jpg"></a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-139.html" title=""
-                       target="_self"><img
-                            src="images/305a90993dfb424dad790f825aef827b.jpg"></a>
+                    <a href="#" title="" target="_self"><img src="images/305a90993dfb424dad790f825aef827b.jpg"></a>
                 </div>
-                <div class="tk_house_item" style="width: 798px;"><img
-                        src="images/d6ee9ecf06f34afa815cb2ba95f61cee.jpg"></div>
+                <div class="tk_house_item" style="width: 798px;"><img src="images/d6ee9ecf06f34afa815cb2ba95f61cee.jpg"></div>
             </div>
         </div>
         <span class="tk_house_arrow" id="tk_house_arrow65"></span>
     </div>
 </div>
-<input type="hidden" id="house_item_1" value="65" alig="fr">
-<!--  -->
-<style>
+<input type="hidden" id="house_item_1" value="65" align="fr">
 
-</style>
-
-<!-- 幻灯放在右边 -->
 <div class="tk_house clearbox" id="tk_house_item66" style="background-color:#DCDCDD;width:100%;margin-top:60px;">
     <div class="tk_house_bg tk_housebg_fl" style="width:45%;">
         <div class="tk_house_txt"><img
                 src="images/b48760d567a84527bb49a61b2512e20f.png"></div>
-        <!--  <div class="tk_house_trianglebg" style="border-color:transparent transparent transparent #DCDCDD;"></div>
-         <div class="tk_house_triangletxt">床品 </div> -->
     </div>
     <div class="tk_house_img tk_houseImg_fl" style="width:55%;">
         <div class="tk_house_box">
             <div class="tk_house_container clearbox" style="width: 3990px;">
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/detail.do?id=8af4f978546bb90e015498b20a8d0050&amp;isDealer="
+                    <a href="#"
                        title="" target="_self">
                         <img src="images/cc6d74ddf9bb42e78d728f8f5fded6b4.jpg">
                     </a>
@@ -1266,167 +479,48 @@
                             src="images/bf6d047c695141a5818b102ba99fee12.jpg"></a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com/8af4f97851286013015128b2cb010000/detail.do?id=8af4f978546bb90e015498b211a100b3&amp;isDealer="
-                       title="" target="_self">
-                        <img src="images/c466ce03576242c5acffc5ee9354c5bf.jpg">
+                    <a href="#" title="" target="_self"><img src="images/c466ce03576242c5acffc5ee9354c5bf.jpg">
                     </a>
                 </div>
                 <div class="tk_house_item" style="position: relative; width: 798px;">
-                    <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/s-19.html" title=""
-                       target="_self"><img
-                            src="images/d06c26c3d7b046138f49bd0f8d8ae6cc.jpg"></a>
+                    <a href="#" title="" target="_self"><img src="images/d06c26c3d7b046138f49bd0f8d8ae6cc.jpg"></a>
                 </div>
-                <div class="tk_house_item" style="width: 798px;"><img
-                        src="images/cc6d74ddf9bb42e78d728f8f5fded6b4.jpg"></div>
+                <div class="tk_house_item" style="width: 798px;"><img src="images/cc6d74ddf9bb42e78d728f8f5fded6b4.jpg"></div>
             </div>
         </div>
         <span class="tk_house_arrow" id="tk_house_arrow66"></span>
     </div>
 </div>
-<input type="hidden" id="house_item_2" value="66" alig="fl">
-<!--  -->
-<style>
+<input type="hidden" id="house_item_2" value="66" align="fl">
 
-
-    .tk_safety_quality {
-        background: url(http://120.25.217.160:80/picture//website_mall/8af4f97851286013015128b2cb010000/2016/65a13453bdd94d9fa661a44948f9040a.png) no-repeat center center;
-        margin-top: 60px;
-    }
-
-    .tk_quality_box ul {
-        padding: 15% 0 3% 43%;
-    }
-
-    @media screen and (max-width: 1400px) {
-        .tk_quality_box ul {
-            padding: 15% 0 3% 45%;
-        }
-    }
-
-    .tk_quality_box li {
-        float: left;
-        margin: 0 14px 14px 0;
-        border-radius: 12px;
-        text-align: center; /*width:178px;height:160px;*/
-        width: 9.5vw;
-        height: 17.5vh;
-        min-width: 150px;
-        min-height: 140px;
-        padding-top: 42px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box; /* Firefox */
-        -webkit-box-sizing: border-box; /* Safari */
-    }
-
-    .tk_quality_box li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .tk_quality_box li strong, .tk_quality_box li span {
-        display: block;
-        margin-bottom: 4px;
-        font-family: "Microsoft Yahei";
-    }
-
-    .tk_quality_box li strong {
-        font-size: 36px;
-        color: #F24B2B;
-    }
-
-    .tk_quality_box li span {
-        font-size: 24px;
-        color: #707070;
-    }
-
-    .tk_quality_box li {
-        width: 178px;
-        height: 160px;
-        border-radius: 12px;
-        padding-top: 0;
-        overflow: hidden;
-    }
-
-    .tk_quality_box .title_box {
-        background: #dddddd;
-    }
-
-    .tk_quality_box .cur_box .title_box {
-        background: #F24B2B;
-    }
-
-    .tk_quality_box .cur_box strong {
-        color: #fff;
-    }
-
-    .tk_quality_box .cur_box span {
-        color: #323232;
-    }
-
-    .tk_quality_box li strong {
-        padding-top: 42px;
-    }
-
-    .tk_quality_box .mask_box {
-        background: #f24b2b;
-    }
-
-    .tk_quality_box .mask_box p {
-        font-size: 18px;
-        color: #fff;
-        line-height: 28px;
-        text-align: left;
-        padding: 20px 16px;
-    }
-
-    .cur_box .mask_box {
-        background: #ddd;
-    }
-
-    .cur_box .mask_box p {
-        color: #333;
-    }
-</style>
 
 <div class="tk_safety_quality">
     <div class="tk_quality_box w1110">
         <ul class="clearbox">
             <li class="animation_li" style="position: relative;">
-                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-44.html" target="_self"
-                   class="title_box" style="background-color:#DDDEDD;">
-                    <strong style="color:#F24B2B;"><font><font>Nhiều khỏe mạnh </font></font></strong><span
-                        style="color:#707070;"><font><font>mà không cần sơn</font></font></span>
-                </a>
-
+                <a href="#" target="_self" class="title_box" style="background-color:#DDDEDD;"><strong style="color:#F24B2B;">MÀU SƠN </strong><span style="color:#707070;">bắt mắt</span></a>
             </li>
             <li class="animation_li" style="position: relative;">
-                <a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-126.html" target="_self"
-                   class="title_box" style="background-color:#DDDEDD;">
-                    <strong style="color:#F24B2B;"><font><font>Bền </font></font></strong><span
-                        style="color:#707070;"><font><font>nhãn hiệu Phần cứng</font></font></span>
+                <a href="#" target="_self" class="title_box" style="background-color:#DDDEDD;">
+                    <strong style="color:#F24B2B;">BỀN </strong><span style="color:#707070;">với thời gian</span>
                 </a>
-
             </li>
-            <li></li>
             <li class="animation_li" style="position: relative;">
-                <a target="_blank" class="title_box" style="background-color:#F24B2B;">
-                    <strong style="color:#FFFFFF;"><font><font>An toàn hơn </font></font></strong><span
-                        style="color:#323232;"><font><font>E0 tấm</font></font></span>
+                <a target="_blank" class="title_box" style="background-color:#F24B2B;"><strong style="color:#FFFFFF;">AN TOÀN  </strong><span style="color:#323232;">cho tất cả</span>
                 </a>
 
             </li>
             <li class="animation_li" style="position: relative;">
                 <a target="_blank" class="title_box" style="background-color:#DDDEDD;">
-                    <strong style="color:#F24B2B;"><font><font>Nhiều nghiêm ngặt </font></font></strong><span
-                        style="color:#707070;"><font><font>kiểm tra nguyên liệu mỗi tháng</font></font></span>
+                    <strong style="color:#F24B2B;">KIỂM TRA </strong><span
+                        style="color:#707070;">nguyên liệu mỗi tháng</span>
                 </a>
 
             </li>
             <li class="animation_li" style="position: relative;">
                 <a target="_blank" class="title_box" style="background-color:#F24B2B;">
-                    <strong style="color:#FFFFFF;"><font><font>thoải mái hơn </font></font></strong><span
-                        style="color:#323232;"><font><font>năm năm bảo hành</font></font></span>
+                    <strong style="color:#FFFFFF;">5 NĂM </strong><span
+                        style="color:#323232;">bảo hành</span>
                 </a>
 
             </li>
@@ -1434,119 +528,99 @@
     </div>
 </div>
 <!--  -->
-<link rel="stylesheet" href="css/tomyniki.css">
-<div class="tk_browse_recently w1110" style="width:1110px;border:0px;margin-top: 26px;">
-    <h2 style="border-bottom: 0px;font-size: 24px;padding: 0px 6px 2px;"><font><font>Người mua chỉ</font></font></h2>
+
+<div class="tk_browse_recently w1110 mt26">
+    <h2>Sản phẩm được nhiều người quan tâm</h2>
     <div class="tk_browse_container">
-        <span class="tk_browse_prev" style="left: -36px;top: 99px;"><img alt=""
-                                                                         src="images/i-prev.png"></span>
-        <span class="tk_browse_next" style="right: -32px;top: 99px;"><img alt=""
-                                                                          src="images/i-next.png"></span>
+        <span class="tk_browse_prev" style="left: -36px;top: 99px;"><img alt="" src="images/i-prev.png"></span>
+        <span class="tk_browse_next" style="right: -32px;top: 99px;"><img alt="" src="images/i-next.png"></span>
         <div class="tk_browse_box" style="width: 1110px;padding: 6px 0;">
-            <ul class="tk_browse_list clearbox" id="tk_browse_goods" style="width: 2760px;">
-                <li style="padding: 0 10px 0 6px;width:260px;">
+            <ul class="tk_browse_list clearbox" id="tk_browse_goods">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/6b8e211aec5e42be99cf5accc79544b1_small.jpg"
-                                 width="260">
+                            <img src="images/6b8e211aec5e42be99cf5accc79544b1_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>Edison
-                            bàn</font></font></a>
+                        <a href="#">Bàn Edison</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/810372a75aad41748feacb3ba0490e4c.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/810372a75aad41748feacb3ba0490e4c.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/4ecc2bbaf20e47f29ce140395bfb3407_small.jpg"
-                                 width="260">
+                            <img src="images/4ecc2bbaf20e47f29ce140395bfb3407_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>Sofa
-                            giường + tủ quần áo + treo kết hợp tủ</font></font></a>
+                        <a href="#">Sofa giường + tủ quần áo + treo kết hợp tủ</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/5f817ef49477491a926b0f69b40f2818.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/5f817ef49477491a926b0f69b40f2818.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/31d95c9e1fc84b28b3030528910ec53c_small.jpg"
-                                 width="260">
+                            <img src="images/31d95c9e1fc84b28b3030528910ec53c_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>giường
-                            tủ quần áo Nobel</font></font></a>
+                        <a href="#">Giường tủ quần áo Nobel</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/c9d9070c53c04fa2890ef95ffcea7123.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/c9d9070c53c04fa2890ef95ffcea7123.jpg" >
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/edbc5a08577b46d890cf095059d83fd4_small.jpg"
-                                 width="260">
+                            <img src="images/edbc5a08577b46d890cf095059d83fd4_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>Container
-                            xử lý tatami</font></font></a>
+                        <a href="#" >Container xử lý tatami</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/ed6215413869449ab8d4d3bf0bcac388.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/ed6215413869449ab8d4d3bf0bcac388.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/b98c643f500445c8af40f5936995d7b1_small.jpg"
-                                 width="260">
+                            <img src="images/b98c643f500445c8af40f5936995d7b1_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>tủ
-                            quần áo tùy chỉnh</font></font></a>
+                        <a href="#">Tủ quần áo tùy chỉnh</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/9cd1c6c2496d43c8af4750130b0f3197.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/9cd1c6c2496d43c8af4750130b0f3197.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/ad0d13f57f9446309e37f005a8a2b6f9_small.jpg"
-                                 width="260">
+                            <img src="images/ad0d13f57f9446309e37f005a8a2b6f9_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>tủ
-                            quần áo tùy chỉnh</font></font></a>
+                        <a href="#">Tủ quần áo tùy chỉnh</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/cd47846dd4764fd68f5c8bb23e0e53da.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/cd47846dd4764fd68f5c8bb23e0e53da.jpg" >
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
                             <img src="images/7be3d9cdb4094387ae8a177479e2963c_small.jpg"
@@ -1554,64 +628,53 @@
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>tủ
-                            tùy chỉnh</font></font></a>
+                        <a href="#">Tủ tùy chỉnh</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/57f3abe8004e4e0aa8c2311de89e1e4e.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/57f3abe8004e4e0aa8c2311de89e1e4e.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/e98df6ae92a5475da7a738404f99f77a_small.jpg"
-                                 width="260">
+                            <img src="images/e98df6ae92a5475da7a738404f99f77a_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>Cát
-                            tủ quần áo</font></font></a>
+                        <a href="#">Cát tủ quần áo</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/6c55048d32bf4b97846d3fae554fa673.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/6c55048d32bf4b97846d3fae554fa673.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/5556140c821d40a09343e23b531413e9_small.jpg"
-                                 width="260">
+                            <img src="images/5556140c821d40a09343e23b531413e9_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>Wright
-                            giường tầng</font></font></a>
+                        <a href="#">Wright giường tầng</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/d33bbdbabb5543dba6c34a69d9a9c326.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/d33bbdbabb5543dba6c34a69d9a9c326.jpg">
                     </div>
                 </li>
-                <li style="padding: 0 10px 0 6px;width:260px;">
+                <li>
                     <div class="tk_browse_goodsImg">
                         <a>
-                            <img src="images/b17fccb6eae34ffd83e2b0aa8334b3ec_small.jpg"
-                                 width="260">
+                            <img src="images/b17fccb6eae34ffd83e2b0aa8334b3ec_small.jpg">
                         </a>
                     </div>
                     <div class="tk_browse_goodsName">
-                        <a href="javascript:void(0);" style="text-decoration: underline;color:#323232;"><font><font>Nobel
-                            bàn</font></font></a>
+                        <a href="#">Nobel bàn</a>
                     </div>
                     <div class="tk_browse_goodsName"></div>
                     <div class="hideimg dn">
-                        <img src="images/629377db845046eb9dd84a2ae34a1dc6.jpg"
-                             style="width:880px;height: 660px;">
+                        <img src="images/629377db845046eb9dd84a2ae34a1dc6.jpg">
                     </div>
                 </li>
             </ul>
@@ -1623,17 +686,14 @@
                 <div class="album_showImg">
 
                 </div>
-                <!-- <div class="album_txt">
-                     <div class="album_txt_bg"></div>
-                    <div class="album_txt_detail"></div>
-                </div> -->
+
             </div>
             <a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html###" class="album_back"
-               id="album_back"><font><font>&lt; </font></font></a>
+               id="album_back">&lt; </a>
             <a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html###" class="album_next"
-               id="album_next"><font><font>&gt;</font></font></a>
+               id="album_next">&gt;</a>
             <span class="album_mark"></span>
-            <span class="album_close"><font><font>×</font></font></span>
+            <span class="album_close">×</span>
         </div>
 
     </div>
@@ -1795,161 +855,71 @@
         })
     })
 </script>
-
-<style>
-    .tk_conpany {
-        margin: 0px auto;
-    }
-
-    .tk_company_news {
-        width: 452px;
-        margin-right: 260px;
-    }
-
-    .tk_news_top {
-        overflow: hidden;
-        border-bottom: 1px solid #E0E0E0;
-        padding: 0 0 12px 0;
-    }
-
-    .tk_news_top p {
-        padding: 0 0 0 50px;
-        line-height: 40px;
-        font-weight: normal;
-        font-size: 24px;
-        color: #323232;
-        font-family: "Microsoft Yahei";
-        float: left;
-    }
-
-    .tk_news_top a {
-        float: right;
-        color: #fd8427;
-        font-size: 15px;
-        margin: 11px 0 0 0;
-    }
-
-    .tk_news_con {
-        padding: 14px 0 0 0;
-    }
-
-    .tk_news_con li {
-        line-height: 26px;
-        font-size: 15px;
-    }
-
-    .tk_news_con li a {
-        color: #505050;
-    }
-
-    .tk_news_con li a em {
-        font-weight: bold;
-        font-size: 12px;
-        padding: 0 10px 0 0;
-        font-style: normal;
-    }
-
-    .tk_consult_top {
-        padding: 0 0 12px 0;
-        overflow: hidden;
-    }
-
-    .tk_consult_top p {
-        margin-left: 40px;
-        font-weight: normal;
-        padding: 0 0 0 48px;
-        background: url(http://www.tomyniki.com/images/advisory.png) left center no-repeat;
-        line-height: 40px;
-        font-size: 24px;
-        color: #323232;
-        font-family: "Microsoft Yahei";
-        float: left;
-    }
-
-    .tk_consult_con {
-        font-size: 15px;
-        color: #505050;
-        line-height: 26px;
-    }
-</style>
 <div class="tk_conpany clo_1 clearbox" style="background-color:#FFFFFF;width: 1110px; margin-top:60px;">
     <div class="tk_company_news fl">
         <div class="tk_news_top">
-            <p style="background:url(http://120.25.217.160:80/website_mall/8af4f97851286013015128b2cb010000/2016/c0da0a6703004f0295058854340eb273.png) left center no-repeat;">
-                <font><font>Tin tức công ty</font></font></p>
-            <a href="http://www.tomyniki.com/newsDetail.do?&amp;orgId=8af4f97851286013015128b2cb010000"><font><font>hơn
-                +</font></font></a>
+            <p>Tin tức công ty</p>
+            <a href="#">Xem thêm +</a>
         </div>
         <div class="tk_news_con">
             <ul>
-                <li><a href="http://www.tomyniki.com/newsDetail.do?&amp;orgId=8af4f97851286013015128b2cb010000&amp;id=1"
-                       target="_blank"><em><font><font>·</font></font></em><font><font> Thiết kế miễn phí</font></font></a>
-                </li>
-                <li><a href="http://www.tomyniki.com/newsDetail.do?&amp;orgId=8af4f97851286013015128b2cb010000&amp;id=2"
-                       target="_blank"><em><font><font>·</font></font></em><font><font> [New] niêm yết nhộn nhịp của
-                    thành phố làng, bạn có thể có được hòa bình thuộc về bạn</font></font></a></li>
+                <li><a href="#" target="_blank"><em>·</em> Thiết kế miễn phí</a></li>
+                <li><a href="#" target="_blank"><em>·</em> Niêm yết nhộn nhịp của thành phố làng, bạn có thể có được hòa bình thuộc về bạn</a></li>
                 <li><a href="http://www.tomyniki.com/newsDetail.do?&amp;orgId=8af4f97851286013015128b2cb010000&amp;id=3"
-                       target="_blank"><em><font><font>·</font></font></em><font><font> [] Thống Qi Tang đánh một làn
-                    sóng mới của phim hoạt hình vui giấc mơ thời thơ ấu đầy màu sắc!</font></font></a></li>
+                       target="_blank"><em>·</em> Đem một làn sóng mới của phim hoạt hình vui giấc mơ thời thơ ấu đầy màu sắc!</a></li>
             </ul>
         </div>
     </div>
     <div class="tk_consult fl">
-        <div class="tk_consult_top"><a target="_blank"
-                                       href="http://wpa.qq.com/msgrd?v=3&amp;uin=2449332488&amp;site=qq&amp;menu=yes">
-            <p><font><font>Tư vấn</font></font></p></a></div>
-
-        <div class="tk_consult_con"><font><font>Giờ làm việc: Thứ Hai đến Thứ Bảy</font></font></div>
+        <div class="tk_consult_top"><a target="_blank" href="#"><p>Tư vấn</p></a></div>
+        <div class="tk_consult_con">Giờ làm việc: Thứ Hai đến Thứ Bảy</div>
         <div class="tk_consult_con">
-            <div class="tk_shopcart_item tk_shopcart_phone"><font><font>400-8300-456</font></font></div>
+            <div class="tk_shopcart_item tk_shopcart_phone">400-8300-456</div>
         </div>
     </div>
 </div>
-<!--  -->
-<div class="footerBox clear" style="background-color:#262626;margin-top:60px;padding-bottom:30px;">
-    <div class="footer" style="width:1110px">
+
+<div class="footerBox clear">
+    <div class="footer">
         <div class="footer_con">
             <div class="footerMenu clearbox">
-                <dl style="width:222px;padding-right:0px;">
-                    <div style="margin: 0px auto; width: 111px;">
-                        <dt style="color:#FFFFFF"><font><font>Giới thiệu</font></font></dt>
+                <dl>
+                    <div style="margin: 0 auto; width: 111px;">
+                        <dt style="color:#FFFFFF">Giới thiệu</dt>
                         <dd>
                             <ul>
                                 <li><a href="http://tomyniki.com/aboutus.aspx" title="" target="_blank"
-                                       style="color:#BFBFBF"><font><font>Hồ sơ công ty</font></font></a></li>
+                                       style="color:#BFBFBF">Hồ sơ công ty</a></li>
                                 <li><a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html"
-                                       title="" target="_blank" style="color:#BFBFBF"><font><font>Tham gia với chúng
-                                    tôi</font></font></a></li>
+                                       title="" target="_blank" style="color:#BFBFBF">Tham gia với chúng
+                                    tôi</a></li>
                                 <li><a href="http://www.tomyniki.com//static/8af4f97851286013015128b2cb010000/p-2.html"
-                                       title="" target="_blank" style="color:#BFBFBF"><font><font>cửa hàng
-                                    ẩn</font></font></a></li>
-                                <li><a style="color:#BFBFBF"><font><font>Tham chúng tôi</font></font></a></li>
+                                       title="" target="_blank" style="color:#BFBFBF">cửa hàng
+                                    ẩn</a></li>
+                                <li><a style="color:#BFBFBF">Tham chúng tôi</a></li>
                             </ul>
                         </dd>
                     </div>
                 </dl>
                 <dl style="width:444px;padding-right:0px;">
                     <div style="margin: 0px auto; width: 386px;">
-                        <dt style="color:#FFFFFF"><font><font>Liên hệ</font></font></dt>
+                        <dt style="color:#FFFFFF">Liên hệ</dt>
                         <dd>
                             <ul>
                                 <li><a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html"
-                                       title="" target="_blank" style="color:#BFBFBF"><font><font>Địa chỉ: Khu công
-                                    nghiệp 3 Longjiang Thuận Đức thành phố Phật Sơn, Bắc đường</font></font></a></li>
-                                <li><a style="color:#BFBFBF"><font><font>Tel: 400-8300-456</font></font></a></li>
+                                       title="" target="_blank" style="color:#BFBFBF">Địa chỉ: Khu công
+                                    nghiệp 3 Longjiang Thuận Đức thành phố Phật Sơn, Bắc đường</a></li>
+                                <li><a style="color:#BFBFBF">Tel: 400-8300-456</a></li>
                                 <li><a href="http://www.tomyniki.com/html/8af4f97851286013015128b2cb010000_index.html"
-                                       title="" target="_blank" style="color:#BFBFBF"><font><font>E-mail:
-                                    yao.huang@tomyniki.com</font></font></a></li>
+                                       title="" target="_blank" style="color:#BFBFBF">E-mail:
+                                    yao.huang@tomyniki.com</a></li>
                             </ul>
                         </dd>
                     </div>
                 </dl>
-                <dl style="width:222px;padding-right:0px;">
-                    <div style="margin: 0px auto; width: 100px;">
-                        <dt style="color:#FFFFFF"><font><font>Thực hiện theo chúng tôi</font></font></dt>
-                        <img src="images/bc6cb7173099459f9eea7796800acd52.jpg"
-                             width="100" height="100" alt="">
-                    </div>
+                <dl>
+                        <dt style="color:#FFFFFF">Theo dõi chúng tôi</dt>
+                        <img src="images/bc6cb7173099459f9eea7796800acd52.jpg" alt=""/>
                 </dl>
             </div>
         </div>
