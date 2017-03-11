@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
 }
 .tk_search {
     margin: 0 0 0 26px;
@@ -58,6 +58,9 @@ input.tk_search_txt:-ms-input-placeholder {
 
 .tk_header {
     position: relative;
+}
+.footerMenu dl{
+    margin-right: 30px;
 }
 
 .tk_browse_recently h2{
@@ -748,3 +751,22 @@ input.tk_search_txt:-ms-input-placeholder {
     width: 140px;
 }
 .icon{display: inline-block !important;}
+.footerMenu dl dt{
+    color: #FFF;
+}
+.footerMenuul li a{
+    color: #BFBFBF !important;
+}
+.lienhe{width: 444px}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: "Roboto", sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: "Roboto", sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: "Roboto", sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-family: "Roboto", sans-serif;
+}
