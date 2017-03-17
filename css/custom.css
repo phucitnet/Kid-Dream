@@ -79,17 +79,17 @@ input.tk_search_txt:-ms-input-placeholder {
 }
 
 .tk_nav_name {
-    width: 113px;
-    text-align: center; /* padding:0 px; */
+    padding: 0 18px;
+    text-align: center;
     position: relative;
     bottom: -1px;
-    z-index: 99; /* border:1px solid transparent; border-top:0;*/
+    z-index: 99;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 .tk_nav_name a {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 58px;
     color: #666666;
     font-weight: bold;
@@ -107,6 +107,25 @@ input.tk_search_txt:-ms-input-placeholder {
 .tk_nav li.tk_cur_nav .tk_nav_name a {
     color: #FF8212;
 }
+.tk-block-title{
+    overflow: hidden;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0 0 12px 0;
+}
+.tk-block-title h3{
+    background: url(../images/handshake.png) left center no-repeat;
+    padding: 0 0 0 50px;
+    line-height: 40px;
+    font-weight: normal;
+    font-size: 24px;
+    color: #323232;
+    font-family: "Roboto", sans-serif;
+    float: left;
+
+}
+
+
+
 
 .tk_nav_sort {
     width: 1072px;
@@ -669,8 +688,13 @@ input.tk_search_txt:-ms-input-placeholder {
 }
 
 .tk_company_news {
-    width: 452px;
-    margin-right: 260px;
+
+}
+.tk-block-4{
+    width: 30%;
+    padding: 0 15px;
+    float: left;
+    overflow: hidden;
 }
 
 .tk_news_top {
@@ -720,6 +744,7 @@ input.tk_search_txt:-ms-input-placeholder {
 .tk_consult_top {
     padding: 0 0 12px 0;
     overflow: hidden;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 .tk_consult_top p {
